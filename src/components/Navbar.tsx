@@ -56,7 +56,7 @@ export function Navbar(): JSX.Element {
             <NavLink href="#despre" className='text-white'>Despre noi</NavLink>
             <NavLink href="#evenimente" className='text-white'>Evenimente</NavLink>
           </div>
-          <NavLink href="#contact" className="rounded-full px-2 py-1.5 text-md font-semibold transition bg-white text-black hover:bg-neutral-400">
+          <NavLink href="#contact" className="rounded-full px-2 py-1.5 text-md font-semibold transition bg-white text-black hover:bg-black">
             Contact
           </NavLink>
         </div>

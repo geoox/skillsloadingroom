@@ -3,14 +3,14 @@ import Image from 'next/image'
 
 import { ContactSection } from '@/components/ContactSection'
 import { Container } from '@/components/Container'
-import { FadeIn, FadeInStagger } from '@/components/FadeIn'
+import { FadeIn } from '@/components/FadeIn'
 import { List, ListItem } from '@/components/List'
 import { SectionIntro } from '@/components/SectionIntro'
-import { StylizedImage } from '@/components/StylizedImage'
 import { Testimonial } from '@/components/Testimonial'
 import logoImg from '@/images/logo.jpg'
-import imageLaptop from '@/images/78370467_3162009300536286_1409008255320981504_n.jpg'
 import landingImg from '@/images/landing.jpg';
+import Events from '@/components/EventsGallery'
+import { LazyStylizedVideo } from '@/components/LazyStylizedVideo'
 
 function Services() {
   return (
@@ -29,62 +29,58 @@ function Services() {
         <div className="lg:flex lg:items-center lg:justify-end">
           <div className="flex justify-center lg:w-1/2 lg:justify-end lg:pr-12">
             <FadeIn className="w-[33.75rem] flex-none lg:w-[45rem]">
-              <StylizedImage
-                src={imageLaptop}
-                sizes="(min-width: 1024px) 41rem, 31rem"
-                className="justify-center lg:justify-end"
-              />
+            <LazyStylizedVideo
+              src="/images/services.mp4"
+              shape={1}
+              poster="/images/bartender.jpg"
+            />
             </FadeIn>
           </div>
           <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
-            
+
             <ListItem title="">
-            <div className='grid grid-cols-2'>
-              <div className='col-span-1 font-display text-4xl font-semibold text-black'>Evenimente private</div>
-              <div className='col-span-1 border-2 border-gray-500 rounded-md p-4 font-display tracking-tight [text-wrap:balance]'>
-                <div>🍸 Open bar/Catering </div>
-                <div>🍸 Coffee corner</div>
-                <div>🍸 Ring for Prosecco wall</div>
-                <div>🍸 Show flair bartending</div>
-                <div>🍸 Echipa barmani</div>
+              <div className='grid md:grid-cols-2'>
+                <div className='col-span-1 font-display text-4xl font-semibold text-black'>Evenimente private</div>
+                <div className='col-span-1 border-1 border-emerald-800 rounded-md p-4 font-display tracking-tight [text-wrap:balance]'>
+                  <div>🍸 Open bar/Catering </div>
+                  <div>🍸 Coffee corner</div>
+                  <div>🍸 Ring for Prosecco wall</div>
+                  <div>🍸 Show flair bartending</div>
+                  <div>🍸 Echipa barmani</div>
+                </div>
               </div>
-            </div>
             </ListItem>
 
             <ListItem title="">
-            <div className='grid grid-cols-2'>
-              <div className='col-span-1 font-display text-4xl font-semibold text-black'>Inchiriere logistica</div>
-              <div className='col-span-1 border-2 p-4 border-gray-500 rounded-md font-display tracking-tight [text-wrap:balance]'>
-                <div>🧊 Baruri </div>
-                <div>🧊 Rafturi backbar</div>
-                <div>🧊 Pahare</div>
-                <div>🧊 Mese cocktail</div>
-                <div>🧊 Frigidere</div>
-                <div>🧊 ⁠Lăzi gheață </div>
-                <div>🧊 ⁠Dozator bere</div>
-                <div>🧊 ⁠Aparatura bar </div>
+              <div className='grid md:grid-cols-2'>
+                <div className='col-span-1 font-display text-4xl font-semibold text-black'>Inchiriere logistica</div>
+                <div className='col-span-1 border-1 p-4 border-emerald-800 rounded-md font-display tracking-tight [text-wrap:balance]'>
+                  <div>🧊 Baruri </div>
+                  <div>🧊 Rafturi backbar</div>
+                  <div>🧊 Pahare</div>
+                  <div>🧊 Mese cocktail</div>
+                  <div>🧊 Frigidere</div>
+                  <div>🧊 ⁠Lăzi gheață </div>
+                  <div>🧊 ⁠Dozator bere</div>
+                  <div>🧊 ⁠Aparatura bar </div>
+                </div>
               </div>
-            </div>
             </ListItem>
 
             <ListItem title="">
-            <div className='grid grid-cols-2'>
-              <div className='col-span-1 font-display text-4xl font-semibold text-black'>Antrenament</div>
-              <div className='col-span-1 border-2 p-4 border-gray-500 rounded-md font-display tracking-tight [text-wrap:balance]'>
-                <div>🍹 Coaching </div>
-                <div>🍹 Spatiu antrenament </div>
+              <div className='grid md:grid-cols-2'>
+                <div className='col-span-1 font-display text-4xl font-semibold text-black'>Antrenament</div>
+                <div className='col-span-1 border-1 p-4 border-emerald-800 rounded-md font-display tracking-tight [text-wrap:balance]'>
+                  <div>🍹 Coaching </div>
+                  <div>🍹 Spatiu antrenament </div>
+                </div>
               </div>
-            </div>
             </ListItem>
           </List>
         </div>
       </Container>
     </div>
   )
-}
-
-function Events() {
-  return (<div id="evenimente">Evenimente</div>);
 }
 
 export const metadata: Metadata = {
