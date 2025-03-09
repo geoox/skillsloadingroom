@@ -16,7 +16,7 @@ import logoGreenLife from '@/images/clients/green-life/logo-light.svg'
 import logoHomeWork from '@/images/clients/home-work/logo-light.svg'
 import logoMailSmirk from '@/images/clients/mail-smirk/logo-light.svg'
 import logoNorthAdventures from '@/images/clients/north-adventures/logo-light.svg'
-import logoPhobiaDark from '@/images/clients/phobia/logo-dark.svg'
+import logoImg from '@/images/logo.jpg'
 import logoPhobiaLight from '@/images/clients/phobia/logo-light.svg'
 import logoUnseal from '@/images/clients/unseal/logo-light.svg'
 import imageLaptop from '@/images/laptop.jpg'
@@ -298,6 +298,7 @@ export default async function Home() {
           </p> */}
         </FadeIn>
       </Container>
+      
       <Team/>
 
       <Clients />
@@ -306,11 +307,9 @@ export default async function Home() {
 
       <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"
-        client={{ name: 'Phobia', logo: logoPhobiaDark }}
+        client={{ name: 'Phobia', logo: logoImg }}
       >
-        The team at Studio went above and beyond with our onboarding, even
-        finding a way to access the user’s microphone without triggering one of
-        those annoying permission dialogs.
+        Clientul este focusul nostru constant. Facem tot posibilul sa gasim un echilibru perfect intre alcool si crazyness.
       </Testimonial>
 
       <Services />

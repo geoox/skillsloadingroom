@@ -53,8 +53,8 @@ function NavBar() {
         <div className="flex items-center justify-between">
             <div className="flex shrink-0">
                 <a aria-current="page" className="flex items-center" href="/">
-                    <Image alt='logo' src={logoImg} height={70}/>
-                    <p className="sr-only">Website Title</p>
+                    {/* <Image alt='logo' src={logoImg} height={60}/> */}
+                    <p className="sr-only">Skills Loading Room</p>
                 </a>
             </div>
             <div className="hidden md:flex md:items-center md:justify-center md:gap-5">
