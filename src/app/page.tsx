@@ -2,6 +2,7 @@ import { type Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 
+import { Border } from '@/components/Border'
 import { ContactSection } from '@/components/ContactSection'
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
@@ -19,6 +20,7 @@ import logoPhobiaDark from '@/images/clients/phobia/logo-dark.svg'
 import logoPhobiaLight from '@/images/clients/phobia/logo-light.svg'
 import logoUnseal from '@/images/clients/unseal/logo-light.svg'
 import imageLaptop from '@/images/laptop.jpg'
+import imageLeslieAlexander from '@/images/team/leslie-alexander.jpg'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
 
 const clients = [
@@ -58,6 +60,110 @@ function Clients() {
         </FadeInStagger>
       </Container>
     </div>
+  )
+}
+
+function Parallaxes() {
+  return (
+    <div className="w-full">
+      {/* Container with enough height for all sections */}
+      <div className="relative w-full" style={{ height: "400vh" }}>
+        {/* Each section is absolutely positioned and takes up 100vh */}
+        <div 
+          className="absolute w-full h-screen flex flex-col items-center justify-center bg-gradient-to-b from-green-200 to-blue-200"
+          style={{ top: "0vh" }}
+        >
+          <h2 className="text-4xl font-bold">The First slide</h2>
+          <p className="mt-2">Scroll Down for next slide</p>
+        </div>
+        
+        <div 
+          className="absolute w-full h-screen flex flex-col items-center justify-center bg-gradient-to-b from-indigo-800 to-purple-800 text-white"
+          style={{ top: "100vh" }}
+        >
+          <h2 className="text-4xl font-bold">The Second slide</h2>
+          <p className="mt-2">Scroll Down for next slide</p>
+        </div>
+        
+        <div 
+          className="absolute w-full h-screen flex flex-col items-center justify-center bg-gradient-to-b from-purple-800 to-pink-800 text-white"
+          style={{ top: "200vh" }}
+        >
+          <h2 className="text-4xl font-bold">The Third slide</h2>
+          <p className="mt-2">Scroll Down</p>
+        </div>
+        
+        <div 
+          className="absolute w-full h-screen flex flex-col items-center justify-center bg-gradient-to-b from-blue-200 to-indigo-100 text-black"
+          style={{ top: "300vh" }}
+        >
+          <h2 className="text-4xl font-bold">The Fourth slide</h2>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+const team = [
+  {
+    title: 'Leadership',
+    people: [
+      {
+        name: 'Catalin Mocanu',
+        role: 'Creator',
+        image: { src: imageLeslieAlexander },
+      }
+    ],
+  },
+  
+]
+
+function Team() {
+  return (
+    <Container className="mt-24 sm:mt-32 lg:mt-40">
+      <div className="space-y-24">
+        {team.map((group) => (
+          <FadeInStagger key={group.title}>
+            <Border as={FadeIn} />
+            <div className="grid grid-cols-1 gap-6 pt-12 sm:pt-16 lg:grid-cols-4 xl:gap-8">
+              <FadeIn>
+                <h2 className="font-display text-2xl font-semibold text-neutral-950">
+                  {group.title}
+                </h2>
+              </FadeIn>
+              <div className="lg:col-span-3">
+                <ul
+                  role="list"
+                  className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-8"
+                >
+                  {group.people.map((person) => (
+                    <li key={person.name}>
+                      <FadeIn>
+                        <div className="group relative overflow-hidden rounded-3xl bg-neutral-100">
+                          <Image
+                            alt=""
+                            {...person.image}
+                            className="h-96 w-full object-cover grayscale transition duration-500 motion-safe:group-hover:scale-105"
+                          />
+                          <div className="absolute inset-0 flex flex-col justify-end bg-linear-to-t from-black to-black/0 to-40% p-6">
+                            <p className="font-display text-base/6 font-semibold tracking-wide text-white">
+                              {person.name}
+                            </p>
+                            <p className="mt-2 text-sm text-white">
+                              {person.role}
+                            </p>
+                          </div>
+                        </div>
+                      </FadeIn>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </FadeInStagger>
+        ))}
+      </div>
+    </Container>
   )
 }
 
@@ -182,7 +288,7 @@ export default async function Home() {
 
   return (
     <>
-      <Container className="h-screen  bg-[url('../images/480262628_1187319833401623_6389039885431505601_n.jpg')] mt-8 rounded-md">
+      <Container className="h-screen bg-[url('../images/480262628_1187319833401623_6389039885431505601_n.jpg')] mt-8 rounded-md">
         <FadeIn className="max-w-3xl">
           <h1 className="font-display text-5xl font-medium tracking-tight [text-wrap:balance] text-white sm:text-7xl">
             Skills Loading Room
@@ -192,6 +298,7 @@ export default async function Home() {
           </p> */}
         </FadeIn>
       </Container>
+      <Team/>
 
       <Clients />
 
