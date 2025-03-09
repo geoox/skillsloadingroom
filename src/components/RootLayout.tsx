@@ -17,11 +17,9 @@ import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Footer } from '@/components/Footer'
 import { GridPattern } from '@/components/GridPattern'
-import { Logo, Logomark } from '@/components/Logo'
+import { Logomark } from '@/components/Logo'
 import { Offices } from '@/components/Offices'
 import { SocialMedia } from '@/components/SocialMedia'
-import logoImg from '@/images/logo.jpg';
-import Image from 'next/image'
 
 const RootLayoutContext = createContext<{
   logoHovered: boolean
@@ -48,30 +46,29 @@ function MenuIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 function NavBar() {
   return (
     <header
-    className="fixed inset-x-0 top-0 z-30 mx-auto w-full max-w-screen-md border border-gray-100 bg-black/80 py-3 shadow backdrop-blur-lg md:top-6 md:rounded-3xl lg:max-w-screen-lg">
-    <div className="px-4">
+      className="fixed inset-x-0 top-0 z-30 mx-auto w-full max-w-screen-md border bg-black/80 py-3 shadow-lg backdrop-blur-lg md:top-6 md:rounded-3xl lg:max-w-screen-lg">
+      <div className="px-4">
         <div className="flex items-center justify-between">
-            <div className="flex shrink-0">
-                <a aria-current="page" className="flex items-center" href="/">
-                    {/* <Image alt='logo' src={logoImg} height={60}/> */}
-                    <p className="sr-only">Skills Loading Room</p>
-                </a>
-            </div>
-            <div className="hidden md:flex md:items-center md:justify-center md:gap-5">
-                <a aria-current="page"
-                    className="inline-block rounded-lg px-2 py-1 text-sm font-medium text-white transition-all duration-200 hover:bg-gray-100 hover:text-gray-900"
-                    href="#">Despre noi</a>
-                <a className="inline-block rounded-lg px-2 py-1 text-sm font-medium text-white transition-all duration-200 hover:bg-gray-100 hover:text-gray-900"
-                    href="#">Servicii</a>
-                <a className="inline-block rounded-lg px-2 py-1 text-sm font-medium text-white transition-all duration-200 hover:bg-gray-100 hover:text-gray-900"
-                    href="#">Evenimente</a>
-            </div>
-            <Button href="/contact" invert={true}>
+          <div className="flex shrink-0">
+            <a aria-current="page" className="flex items-center" href="/">
+              <p className="sr-only">Skills Loading Room</p>
+            </a>
+          </div>
+          <div className="hidden md:flex md:items-center md:justify-center md:gap-5">
+            <a aria-current="page"
+              className="inline-block rounded-lg px-8 py-1 text-lg font-medium text-white transition-all duration-200 hover:bg-gray-100 hover:text-gray-900"
+              href="#">Despre noi</a>
+            <a className="inline-block rounded-lg px-8 py-1 text-lg font-medium text-white transition-all duration-200 hover:bg-gray-100 hover:text-gray-900"
+              href="#">Servicii</a>
+            <a className="inline-block rounded-lg px-8 py-1 text-lg font-medium text-white transition-all duration-200 hover:bg-gray-100 hover:text-gray-900"
+              href="#">Evenimente</a>
+          </div>
+          <Button href="/contact" invert={true}>
             Contact
           </Button>
         </div>
-    </div>
-</header>
+      </div>
+    </header>
   )
 }
 
@@ -107,33 +104,8 @@ function Header({
             filled={logoHovered}
           />
         </Link>
-        {/* <div className="flex items-center gap-x-8">
-          <Button href="/contact" invert={invert}>
-            Contact us
-          </Button>
-          <button
-            ref={toggleRef}
-            type="button"
-            onClick={onToggle}
-            aria-expanded={expanded ? 'true' : 'false'}
-            aria-controls={panelId}
-            className={clsx(
-              'group -m-2.5 rounded-full p-2.5 transition',
-              invert ? 'hover:bg-white/10' : 'hover:bg-neutral-950/10',
-            )}
-            aria-label="Toggle navigation"
-          >
-            <Icon
-              className={clsx(
-                'h-6 w-6',
-                invert
-                  ? 'fill-white group-hover:fill-neutral-200'
-                  : 'fill-neutral-950 group-hover:fill-neutral-700',
-              )}
-            />
-          </button>
-        </div> */}
-        <NavBar/>
+
+        <NavBar />
       </div>
     </Container>
   )
