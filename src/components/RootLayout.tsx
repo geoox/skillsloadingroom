@@ -20,6 +20,7 @@ import { GridPattern } from '@/components/GridPattern'
 import { Logomark } from '@/components/Logo'
 import { Offices } from '@/components/Offices'
 import { SocialMedia } from '@/components/SocialMedia'
+import { Navbar } from '@/components/Navbar'
 
 const RootLayoutContext = createContext<{
   logoHovered: boolean
@@ -43,34 +44,34 @@ function MenuIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   )
 }
 
-function NavBar() {
-  return (
-    <header
-      className="fixed inset-x-0 top-0 z-30 mx-auto w-full max-w-screen-md border bg-black/80 py-3 shadow-lg backdrop-blur-lg md:top-6 md:rounded-3xl lg:max-w-screen-lg">
-      <div className="px-4">
-        <div className="flex items-center justify-between">
-          <div className="flex shrink-0">
-            <a aria-current="page" className="flex items-center" href="/">
-              <p className="sr-only">Skills Loading Room</p>
-            </a>
-          </div>
-          <div className="hidden md:flex md:items-center md:justify-center md:gap-5">
-            <a aria-current="page"
-              className="inline-block rounded-lg px-8 py-1 text-lg font-medium text-white transition-all duration-200 hover:bg-gray-100 hover:text-gray-900"
-              href="#">Despre noi</a>
-            <a className="inline-block rounded-lg px-8 py-1 text-lg font-medium text-white transition-all duration-200 hover:bg-gray-100 hover:text-gray-900"
-              href="#">Servicii</a>
-            <a className="inline-block rounded-lg px-8 py-1 text-lg font-medium text-white transition-all duration-200 hover:bg-gray-100 hover:text-gray-900"
-              href="#">Evenimente</a>
-          </div>
-          <Button href="/contact" invert={true}>
-            Contact
-          </Button>
-        </div>
-      </div>
-    </header>
-  )
-}
+// function NavBar() {
+//   return (
+//     <header
+//       className="fixed inset-x-0 top-0 z-30 mx-auto w-full max-w-screen-md border bg-black/80 py-3 shadow-lg backdrop-blur-lg md:top-6 md:rounded-3xl lg:max-w-screen-lg">
+//       <div className="px-4">
+//         <div className="flex items-center justify-between">
+//           <div className="flex shrink-0">
+//             <a aria-current="page" className="flex items-center" href="/">
+//               <p className="sr-only">Skills Loading Room</p>
+//             </a>
+//           </div>
+//           <div className="hidden md:flex md:items-center md:justify-center md:gap-5">
+//             <a aria-current="page"
+//               className="inline-block rounded-lg px-8 py-1 text-lg font-medium text-white transition-all duration-200 hover:bg-gray-100 hover:text-gray-900"
+//               href="#">Despre noi</a>
+//             <a className="inline-block rounded-lg px-8 py-1 text-lg font-medium text-white transition-all duration-200 hover:bg-gray-100 hover:text-gray-900"
+//               href="#">Servicii</a>
+//             <a className="inline-block rounded-lg px-8 py-1 text-lg font-medium text-white transition-all duration-200 hover:bg-gray-100 hover:text-gray-900"
+//               href="#">Evenimente</a>
+//           </div>
+//           <Button href="/contact" invert={true}>
+//             Contact
+//           </Button>
+//         </div>
+//       </div>
+//     </header>
+//   )
+// }
 
 function Header({
   panelId,
@@ -105,7 +106,7 @@ function Header({
           />
         </Link>
 
-        <NavBar />
+        <Navbar />
       </div>
     </Container>
   )

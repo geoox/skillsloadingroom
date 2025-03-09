@@ -21,6 +21,7 @@ export function Testimonial({
         'relative isolate bg-neutral-50 py-16 sm:py-28 md:py-32',
         className,
       )}
+      id="despre"
     >
       <GridPattern
         className="absolute inset-0 -z-10 h-full w-full fill-neutral-100 stroke-neutral-950/5 [mask-image:linear-gradient(to_bottom_left,white_50%,transparent_60%)]"
