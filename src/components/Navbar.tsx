@@ -33,7 +33,7 @@ const NavLink: React.FC<NavLinkProps> = ({ href, children, className = "" }) => 
     <a 
       href={href}
       onClick={handleClick}
-      className={`inline-block rounded-lg px-8 py-1 text-lg font-medium transition-all duration-200 hover:bg-gray-100 hover:text-gray-900 ${className}`}
+      className={`inline-block rounded-lg px-8 py-1 text-md font-semibold transition-all duration-200 hover:bg-gray-100 hover:text-gray-900 ${className}`}
     >
       {children}
     </a>
@@ -43,12 +43,12 @@ const NavLink: React.FC<NavLinkProps> = ({ href, children, className = "" }) => 
 export function Navbar(): JSX.Element {
   return (
     <header
-      className="fixed inset-x-0 top-0 z-30 mx-auto w-full max-w-screen-md border bg-black/80 py-3 shadow-lg backdrop-blur-lg md:top-6 md:rounded-3xl lg:max-w-screen-lg">
+      className="fixed inset-x-0 top-0 z-30 mx-auto w-full max-w-screen-md border bg-black/80 py-1 shadow-lg backdrop-blur-lg md:top-6 md:rounded-3xl lg:max-w-screen-lg">
       <div className="px-4">
         <div className="flex items-center justify-between">
           <div className="flex shrink-0">
             <NavLink href="#home" className="flex items-center">
-              <Image alt='logo' src={logoImg} height={50} className='rounded-md'/>
+              <Image alt='logo' src={logoImg} height={40} className='rounded-md'/>
             </NavLink>
           </div>
           <div className="hidden md:flex md:items-center md:justify-center md:gap-5">

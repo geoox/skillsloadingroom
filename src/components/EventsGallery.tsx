@@ -22,7 +22,7 @@ function Events() {
                                     <li className="z-30 flex-auto text-center">
                                         <a
                                             className={`z-30 flex items-center justify-center w-full px-0 py-2 text-lg mb-0 transition-all ease-in-out border-0 rounded-lg cursor-pointer ${activeTab === 'app'
-                                                    ? 'font-bold shadow-md text-white bg-emerald-950'
+                                                    ? 'font-bold shadow-md text-white bg-black'
                                                     : 'text-slate-700 bg-inherit'
                                                 }`}
                                             onClick={() => handleTabChange('app')}
@@ -36,7 +36,7 @@ function Events() {
                                     <li className="z-30 flex-auto text-center">
                                         <a
                                             className={`z-30 flex items-center justify-center w-full px-0 py-2 text-lg mb-0 transition-all ease-in-out border-0 rounded-lg cursor-pointer ${activeTab === 'message'
-                                                    ? 'font-bold shadow-md text-white bg-emerald-950'
+                                                    ? 'font-bold shadow-md text-white bg-black'
                                                     : 'text-slate-700 bg-inherit'
                                                 }`}
                                             onClick={() => handleTabChange('message')}
@@ -50,7 +50,7 @@ function Events() {
                                     <li className="z-30 flex-auto text-center">
                                         <a
                                             className={`z-30 flex items-center justify-center w-full px-0 py-2 text-lg mb-0 transition-all ease-in-out border-0 rounded-lg cursor-pointer ${activeTab === 'settings'
-                                                    ? 'font-bold shadow-md text-white bg-emerald-950'
+                                                    ? 'font-bold shadow-md text-white bg-black'
                                                     : 'text-slate-700 bg-inherit'
                                                 }`}
                                             onClick={() => handleTabChange('settings')}

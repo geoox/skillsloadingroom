@@ -6,11 +6,11 @@ import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { List, ListItem } from '@/components/List'
 import { SectionIntro } from '@/components/SectionIntro'
-import { Testimonial } from '@/components/Testimonial'
-import logoImg from '@/images/logo.jpg'
 import landingImg from '@/images/landing.jpg';
 import Events from '@/components/EventsGallery'
 import { LazyStylizedVideo } from '@/components/LazyStylizedVideo'
+import { Features } from '@/components/Features'
+import Team from '@/components/Team'
 
 function Services() {
   return (
@@ -92,7 +92,7 @@ export default async function Home() {
 
   return (
     <div id="home">
-      <Container className="h-screen mt-8 rounded-md relative overflow-hidden">
+      <Container className="h-[80vh] mt-8 rounded-md relative overflow-hidden">
         <Image
           src={landingImg}
           alt="Skills Loading Room background"
@@ -112,12 +112,9 @@ export default async function Home() {
 
       <Services />
 
-      <Testimonial
-        className="mt-24 sm:mt-32 lg:mt-40"
-        client={{ name: 'Phobia', logo: logoImg }}
-      >
-        Testimonial.
-      </Testimonial>
+      <Features/>
+
+      <Team/>
 
       <Events />
 
