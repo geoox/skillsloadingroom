@@ -15,7 +15,7 @@ export function ContactSection() {
                   👋 Spune-ne cum te putem ajuta
                 </h2>
                 <div className="mt-6 flex">
-                  <Button href="/contact" invert>
+                  <Button href="tel:+40756830605" invert>
                     📞 +40 756 830 605
                   </Button>
                 </div>
