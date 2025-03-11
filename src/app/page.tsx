@@ -56,7 +56,7 @@ function Services() {
             <ListItem title="">
               <div className='grid md:grid-cols-2'>
                 <div className='col-span-1 font-display text-4xl font-semibold text-black'>Inchiriere logistica</div>
-                <div className='col-span-1 border-1 p-4 border-gray-900 bg-black text-white  rounded-md font-display tracking-tight [text-wrap:balance]'>
+                <div className='col-span-1 border-1 p-4 border-gray-900 bg-gray-900 text-white  rounded-md font-display tracking-tight [text-wrap:balance]'>
                   <div>🧊 Baruri </div>
                   <div>🧊 Rafturi backbar</div>
                   <div>🧊 Pahare</div>
