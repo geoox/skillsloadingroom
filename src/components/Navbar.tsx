@@ -53,7 +53,7 @@ export function Navbar(): JSX.Element {
           </div>
           <div className="hidden md:flex md:items-center md:justify-center md:gap-5">
             <NavLink href="#servicii" className='text-white'>Servicii</NavLink>
-            <NavLink href="#despre" className='text-white'>Despre noi</NavLink>
+            <NavLink href="#despre-noi" className='text-white'>Despre noi</NavLink>
             <NavLink href="#evenimente" className='text-white'>Evenimente</NavLink>
           </div>
           <NavLink href="#contact" className="rounded-full px-2 py-1.5 text-md font-semibold transition bg-white text-black hover:bg-black">

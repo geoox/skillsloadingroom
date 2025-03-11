@@ -1,5 +1,5 @@
-'use client'
 import { useId } from 'react'
+import Image, { type ImageProps } from 'next/image'
 import clsx from 'clsx'
 
 const shapes = [
@@ -20,30 +20,13 @@ const shapes = [
   },
 ]
 
-export type VideoProps = {
-  src: string
-  autoPlay?: boolean
-  muted?: boolean
-  loop?: boolean
-  controls?: boolean
-  playsInline?: boolean
-  poster?: string
-  preload?: 'auto' | 'metadata' | 'none'
-  className?: string
-  style?: React.CSSProperties
-}
+type ImagePropsWithOptionalAlt = Omit<ImageProps, 'alt'> & { alt?: string }
 
-export function StylizedVideo({
+export function StylizedImage({
   shape = 0,
   className,
-  autoPlay = true,
-  muted = true,
-  loop = true,
-  controls = false,
-  playsInline = true,
-  preload = 'metadata',
   ...props
-}: VideoProps & { shape?: 0 | 1 | 2 }) {
+}: ImagePropsWithOptionalAlt & { shape?: 0 | 1 | 2 }) {
   let id = useId()
   let { width, height, path } = shapes[shape]
 
@@ -58,15 +41,10 @@ export function StylizedVideo({
         <g clipPath={`url(#${id}-clip)`} className="group">
           <g className="origin-center scale-100 transition duration-500 motion-safe:group-hover:scale-105">
             <foreignObject width={width} height={height}>
-              <video
-                className="h-full w-full bg-neutral-100 object-cover"
+              <Image
+                alt=""
+                className="w-full bg-neutral-100 object-cover"
                 style={{ aspectRatio: `${width} / ${height}` }}
-                autoPlay={autoPlay}
-                muted={muted}
-                loop={loop}
-                controls={controls}
-                playsInline={playsInline}
-                preload={preload}
                 {...props}
               />
             </foreignObject>

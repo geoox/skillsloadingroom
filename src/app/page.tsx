@@ -8,9 +8,11 @@ import { List, ListItem } from '@/components/List'
 import { SectionIntro } from '@/components/SectionIntro'
 import landingImg from '@/images/landing.jpg';
 import Events from '@/components/EventsGallery'
-import { LazyStylizedVideo } from '@/components/LazyStylizedVideo'
 import { Features } from '@/components/Features'
 import Team from '@/components/Team'
+import logistica1 from '@/images/logistica1.jpeg';
+import AboutPage from '@/components/About'
+import { StylizedImage } from '@/components/StylizedImage'
 
 function Services() {
   return (
@@ -29,11 +31,11 @@ function Services() {
         <div className="lg:flex lg:items-center lg:justify-end">
           <div className="flex justify-center lg:w-1/2 lg:justify-end lg:pr-12">
             <FadeIn className="w-[33.75rem] flex-none lg:w-[45rem]">
-            <LazyStylizedVideo
-              src="/images/services.mp4"
-              shape={1}
-              poster="/images/bartender.jpg"
-            />
+            <StylizedImage
+                src={logistica1}
+                sizes="(min-width: 1024px) 41rem, 31rem"
+                className="justify-center lg:justify-end"
+              />
             </FadeIn>
           </div>
           <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
@@ -41,7 +43,7 @@ function Services() {
             <ListItem title="">
               <div className='grid md:grid-cols-2'>
                 <div className='col-span-1 font-display text-4xl font-semibold text-black'>Evenimente private</div>
-                <div className='col-span-1 border-1 border-emerald-800 rounded-md p-4 font-display tracking-tight [text-wrap:balance]'>
+                <div className='col-span-1 border-1 border-black bg-gray-900 text-white rounded-md p-4 font-display tracking-tight [text-wrap:balance]'>
                   <div>🍸 Open bar/Catering </div>
                   <div>🍸 Coffee corner</div>
                   <div>🍸 Ring for Prosecco wall</div>
@@ -54,7 +56,7 @@ function Services() {
             <ListItem title="">
               <div className='grid md:grid-cols-2'>
                 <div className='col-span-1 font-display text-4xl font-semibold text-black'>Inchiriere logistica</div>
-                <div className='col-span-1 border-1 p-4 border-emerald-800 rounded-md font-display tracking-tight [text-wrap:balance]'>
+                <div className='col-span-1 border-1 p-4 border-gray-900 bg-black text-white  rounded-md font-display tracking-tight [text-wrap:balance]'>
                   <div>🧊 Baruri </div>
                   <div>🧊 Rafturi backbar</div>
                   <div>🧊 Pahare</div>
@@ -70,7 +72,7 @@ function Services() {
             <ListItem title="">
               <div className='grid md:grid-cols-2'>
                 <div className='col-span-1 font-display text-4xl font-semibold text-black'>Antrenament</div>
-                <div className='col-span-1 border-1 p-4 border-emerald-800 rounded-md font-display tracking-tight [text-wrap:balance]'>
+                <div className='col-span-1 border-1 p-4 border-black bg-gray-900 text-white  rounded-md font-display tracking-tight [text-wrap:balance]'>
                   <div>🍹 Coaching </div>
                   <div>🍹 Spatiu antrenament </div>
                 </div>
@@ -111,6 +113,8 @@ export default async function Home() {
       </Container>
 
       <Services />
+
+      <AboutPage/>
 
       <Features/>
 
