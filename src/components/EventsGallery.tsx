@@ -1,6 +1,36 @@
 'use client';
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { FadeIn } from './FadeIn';
+
+// Import all images
+import image6 from '../images/image00006.jpeg';
+import image7 from '../images/fest1.jpg';
+import image8 from '../images/fest2.jpg';
+import image9 from '../images/fest3.jpg';
+import image10 from '../images/image00010.jpeg';
+import image11 from '../images/image00011.jpeg';
+import image12 from '../images/image00012.jpeg';
+import image13 from '../images/image00013.jpeg';
+import image14 from '../images/image00014.jpeg';
+import coffee1 from '../images/ING_0-23.jpg';
+import image5 from '../images/fest6.jpg';
+import image17 from '../images/IMG_-27.jpg';
+import image19 from '../images/image00019.jpeg';
+import image20 from '../images/image00020.jpeg';
+import image21 from '../images/image00021.jpeg';
+import image22 from '../images/image00022.jpeg';
+import image23 from '../images/image00023.jpeg';
+import image24 from '../images/image00024.jpeg';
+import image25 from '../images/image00025.jpeg';
+import image26 from '../images/image00026.jpeg';
+import image27 from '../images/image00027.jpeg';
+import image28 from '../images/image00028.jpeg';
+import image29 from '../images/image00029.jpeg';
+import image4 from '../images/fest7.jpg';
+import image3 from '../images/fest8.jpg';
+import image34 from '../images/image00034.jpeg';
+import image35 from '../images/image00035.jpeg';
 
 function Events() {
     // State to keep track of active tab
@@ -72,32 +102,74 @@ function Events() {
                             >
                                 <div className="grid grid-cols-12 gap-4 p-4">
                                     <div className="col-span-12 md:col-span-8">
-                                        <img className="w-full h-64 object-cover rounded-lg shadow-md"
-                                            src="https://images.unsplash.com/photo-1516997121675-4c2d1684aa3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="Bartender mixing cocktail" />
+                                        <div className="relative w-full h-64 rounded-lg shadow-md overflow-hidden">
+                                            <Image 
+                                                src={image6}
+                                                alt="Bartender mixing cocktail"
+                                                fill
+                                                style={{ objectFit: 'cover' }}
+                                            />
+                                        </div>
                                     </div>
                                     <div className="col-span-12 md:col-span-4">
-                                        <img className="w-full h-64 object-cover rounded-lg shadow-md"
-                                            src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="Whiskey pouring" />
+                                        <div className="relative w-full h-64 rounded-lg shadow-md overflow-hidden">
+                                            <Image 
+                                                src={image26}
+                                                alt="Whiskey pouring"
+                                                fill
+                                                style={{ objectFit: 'cover' }}
+                                            />
+                                        </div>
                                     </div>
                                     <div className="col-span-6 md:col-span-4">
-                                        <img className="w-full h-40 object-cover rounded-lg shadow-md"
-                                            src="https://images.unsplash.com/photo-1536935338788-846bb9981813?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="Bartender tools" />
+                                        <div className="relative w-full h-40 rounded-lg shadow-md overflow-hidden">
+                                            <Image 
+                                                src={image22}
+                                                alt="Bartender tools"
+                                                fill
+                                                style={{ objectFit: 'cover' }}
+                                            />
+                                        </div>
                                     </div>
                                     <div className="col-span-6 md:col-span-3">
-                                        <img className="w-full h-40 object-cover rounded-lg shadow-md"
-                                            src="https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="Cocktail shaker" />
+                                        <div className="relative w-full h-40 rounded-lg shadow-md overflow-hidden">
+                                            <Image 
+                                                src={image11}
+                                                alt="Cocktail shaker"
+                                                fill
+                                                style={{ objectFit: 'cover' }}
+                                            />
+                                        </div>
                                     </div>
                                     <div className="col-span-12 md:col-span-5">
-                                        <img className="w-full h-40 object-cover rounded-lg shadow-md"
-                                            src="https://images.unsplash.com/photo-1582106245687-cbb466a9f07f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="Bartender pouring wine" />
+                                        <div className="relative w-full h-40 rounded-lg shadow-md overflow-hidden">
+                                            <Image 
+                                                src={image10}
+                                                alt="Bartender pouring wine"
+                                                fill
+                                                style={{ objectFit: 'cover' }}
+                                            />
+                                        </div>
                                     </div>
                                     <div className="col-span-12 md:col-span-7">
-                                        <img className="w-full h-48 object-cover rounded-lg shadow-md"
-                                            src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="Elegant bar counter" />
+                                        <div className="relative w-full h-48 rounded-lg shadow-md overflow-hidden">
+                                            <Image 
+                                                src={image5}
+                                                alt="Elegant bar counter"
+                                                fill
+                                                style={{ objectFit: 'cover' }}
+                                            />
+                                        </div>
                                     </div>
                                     <div className="col-span-12 md:col-span-5">
-                                        <img className="w-full h-48 object-cover rounded-lg shadow-md"
-                                            src="https://images.unsplash.com/photo-1497644083578-611b798c60f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="Cocktail preparation" />
+                                        <div className="relative w-full h-48 rounded-lg shadow-md overflow-hidden">
+                                            <Image 
+                                                src={image34}
+                                                alt="Bartender pouring cocktail"
+                                                fill
+                                                style={{ objectFit: 'cover' }}
+                                            />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -108,36 +180,84 @@ function Events() {
                             >
                                 <div className="grid grid-cols-12 gap-4 p-4">
                                     <div className="col-span-12 md:col-span-6">
-                                        <img className="w-full h-56 object-cover rounded-lg shadow-md"
-                                            src="https://images.unsplash.com/photo-1527661591475-527312dd65f5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="Corporate bartending event" />
+                                        <div className="relative w-full h-56 rounded-lg shadow-md overflow-hidden">
+                                            <Image 
+                                                src={image13}
+                                                alt="Corporate bartending event"
+                                                fill
+                                                style={{ objectFit: 'cover' }}
+                                            />
+                                        </div>
                                     </div>
                                     <div className="col-span-6 md:col-span-3">
-                                        <img className="w-full h-56 object-cover rounded-lg shadow-md"
-                                            src="https://images.unsplash.com/photo-1575444758702-4a6b9222336e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="Bartender serving champagne" />
+                                        <div className="relative w-full h-56 rounded-lg shadow-md overflow-hidden">
+                                            <Image 
+                                                src={image14}
+                                                alt="Bartender serving champagne"
+                                                fill
+                                                style={{ objectFit: 'cover' }}
+                                            />
+                                        </div>
                                     </div>
                                     <div className="col-span-6 md:col-span-3">
-                                        <img className="w-full h-56 object-cover rounded-lg shadow-md"
-                                            src="https://images.unsplash.com/photo-1516997121675-4c2d1684aa3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="Professional bartender" />
+                                        <div className="relative w-full h-56 rounded-lg shadow-md overflow-hidden">
+                                            <Image 
+                                                src={image19}
+                                                alt="Professional bartender"
+                                                fill
+                                                style={{ objectFit: 'cover' }}
+                                            />
+                                        </div>
                                     </div>
                                     <div className="col-span-6 md:col-span-4">
-                                        <img className="w-full h-40 object-cover rounded-lg shadow-md"
-                                            src="https://images.unsplash.com/photo-1516997121675-4c2d1684aa3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="Mobile bar setup" />
+                                        <div className="relative w-full h-40 rounded-lg shadow-md overflow-hidden">
+                                            <Image 
+                                                src={image20}
+                                                alt="Mobile bar setup"
+                                                fill
+                                                style={{ objectFit: 'cover' }}
+                                            />
+                                        </div>
                                     </div>
                                     <div className="col-span-6 md:col-span-8">
-                                        <img className="w-full h-40 object-cover rounded-lg shadow-md"
-                                            src="https://images.unsplash.com/photo-1516997121675-4c2d1684aa3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="Corporate cocktail service" />
+                                        <div className="relative w-full h-40 rounded-lg shadow-md overflow-hidden">
+                                            <Image 
+                                                src={image21}
+                                                alt="Corporate cocktail service"
+                                                fill
+                                                style={{ objectFit: 'cover' }}
+                                            />
+                                        </div>
                                     </div>
                                     <div className="col-span-4 md:col-span-3">
-                                        <img className="w-full h-32 object-cover rounded-lg shadow-md"
-                                            src="https://images.unsplash.com/photo-1574096079513-d8259312b785?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="Bartender pouring cocktail" />
+                                        <div className="relative w-full h-44 rounded-lg shadow-md overflow-hidden">
+                                            <Image 
+                                                src={image17}
+                                                alt="Bartender pouring cocktail"
+                                                fill
+                                                style={{ objectFit: 'cover' }}
+                                            />
+                                        </div>
                                     </div>
                                     <div className="col-span-8 md:col-span-5">
-                                        <img className="w-full h-32 object-cover rounded-lg shadow-md"
-                                            src="https://images.unsplash.com/photo-1582106245687-cbb466a9f07f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="Professional wine service" />
+                                        <div className="relative w-full h-44 rounded-lg shadow-md overflow-hidden">
+                                            <Image 
+                                                src={image28}
+                                                alt="Professional wine service"
+                                                fill
+                                                style={{ objectFit: 'cover' }}
+                                            />
+                                        </div>
                                     </div>
                                     <div className="col-span-12 md:col-span-4">
-                                        <img className="w-full h-32 object-cover rounded-lg shadow-md"
-                                            src="https://images.unsplash.com/photo-1536599424071-0b215a388ba7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="Corporate bar setup" />
+                                        <div className="relative w-full h-44 rounded-lg shadow-md overflow-hidden">
+                                            <Image 
+                                                src={coffee1}
+                                                alt="Corporate bar setup"
+                                                fill
+                                                style={{ objectFit: 'cover' }}
+                                            />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -148,48 +268,108 @@ function Events() {
                             >
                                 <div className="grid grid-cols-12 gap-4 p-4">
                                     <div className="col-span-12 md:col-span-5">
-                                        <img className="w-full h-64 object-cover rounded-lg shadow-md"
-                                            src="https://images.unsplash.com/photo-1516997121675-4c2d1684aa3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="Festival bar setup" />
+                                        <div className="relative w-full h-64 rounded-lg shadow-md overflow-hidden">
+                                            <Image 
+                                                src={image21}
+                                                alt="Festival bar setup"
+                                                fill
+                                                style={{ objectFit: 'cover' }}
+                                            />
+                                        </div>
                                     </div>
                                     <div className="col-span-12 md:col-span-7">
                                         <div className="grid grid-cols-12 gap-4 h-full">
                                             <div className="col-span-12">
-                                                <img className="w-full h-32 object-cover rounded-lg shadow-md"
-                                                    src="https://images.unsplash.com/photo-1551538827-9c037cb4f32a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="Festival crowd at bar" />
+                                                <div className="relative w-full h-32 rounded-lg shadow-md overflow-hidden">
+                                                    <Image 
+                                                        src={image22}
+                                                        alt="Festival crowd at bar"
+                                                        fill
+                                                        style={{ objectFit: 'cover' }}
+                                                    />
+                                                </div>
                                             </div>
                                             <div className="col-span-6">
-                                                <img className="w-full h-28 object-cover rounded-lg shadow-md"
-                                                    src="https://images.unsplash.com/photo-1525268323446-0505b6fe7778?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="Bartender at festival" />
+                                                <div className="relative w-full h-28 rounded-lg shadow-md overflow-hidden">
+                                                    <Image 
+                                                        src={image23}
+                                                        alt="Bartender at festival"
+                                                        fill
+                                                        style={{ objectFit: 'cover' }}
+                                                    />
+                                                </div>
                                             </div>
                                             <div className="col-span-6">
-                                                <img className="w-full h-28 object-cover rounded-lg shadow-md"
-                                                    src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="Festival drinks" />
+                                                <div className="relative w-full h-28 rounded-lg shadow-md overflow-hidden">
+                                                    <Image 
+                                                        src={image24}
+                                                        alt="Festival drinks"
+                                                        fill
+                                                        style={{ objectFit: 'cover' }}
+                                                    />
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div className="col-span-4 md:col-span-3">
-                                        <img className="w-full h-40 object-cover rounded-lg shadow-md"
-                                            src="https://images.unsplash.com/photo-1516997121675-4c2d1684aa3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="Outdoor bar" />
+                                        <div className="relative w-full h-40 rounded-lg shadow-md overflow-hidden">
+                                            <Image 
+                                                src={image25}
+                                                alt="Outdoor bar"
+                                                fill
+                                                style={{ objectFit: 'cover' }}
+                                            />
+                                        </div>
                                     </div>
                                     <div className="col-span-4 md:col-span-3">
-                                        <img className="w-full h-40 object-cover rounded-lg shadow-md"
-                                            src="https://images.unsplash.com/photo-1509807995916-c332365e2d9e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="Festival bartender in action" />
+                                        <div className="relative w-full h-40 rounded-lg shadow-md overflow-hidden">
+                                            <Image 
+                                                src={image26}
+                                                alt="Festival bartender in action"
+                                                fill
+                                                style={{ objectFit: 'cover' }}
+                                            />
+                                        </div>
                                     </div>
                                     <div className="col-span-4 md:col-span-3">
-                                        <img className="w-full h-40 object-cover rounded-lg shadow-md"
-                                            src="https://images.unsplash.com/photo-1516997121675-4c2d1684aa3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="Colorful festival cocktails" />
+                                        <div className="relative w-full h-40 rounded-lg shadow-md overflow-hidden">
+                                            <Image 
+                                                src={image13}
+                                                alt="Colorful festival cocktails"
+                                                fill
+                                                style={{ objectFit: 'cover' }}
+                                            />
+                                        </div>
                                     </div>
                                     <div className="col-span-12 md:col-span-3">
-                                        <img className="w-full h-40 object-cover rounded-lg shadow-md"
-                                            src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="Night bar at festival" />
+                                        <div className="relative w-full h-40 rounded-lg shadow-md overflow-hidden">
+                                            <Image 
+                                                src={image7}
+                                                alt="Night bar at festival"
+                                                fill
+                                                style={{ objectFit: 'cover' }}
+                                            />
+                                        </div>
                                     </div>
                                     <div className="col-span-6 md:col-span-6">
-                                        <img className="w-full h-48 object-cover rounded-lg shadow-md"
-                                            src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="Festival outdoor bar panorama" />
+                                        <div className="relative w-full h-48 rounded-lg shadow-md overflow-hidden">
+                                            <Image 
+                                                src={image35}
+                                                alt="Festival outdoor bar panorama"
+                                                fill
+                                                style={{ objectFit: 'cover' }}
+                                            />
+                                        </div>
                                     </div>
                                     <div className="col-span-6 md:col-span-6">
-                                        <img className="w-full h-48 object-cover rounded-lg shadow-md"
-                                            src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="Bartenders serving crowd" />
+                                        <div className="relative w-full h-48 rounded-lg shadow-md overflow-hidden">
+                                            <Image 
+                                                src={image3}
+                                                alt="Bartenders serving crowd"
+                                                fill
+                                                style={{ objectFit: 'cover' }}
+                                            />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
