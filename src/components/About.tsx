@@ -2,17 +2,17 @@ import { FadeIn } from "./FadeIn"
 
 const cards = [
     {
-      name: '🍸 Evenimente private',
+      name: 'Evenimente',
       description:
         'Transformăm orice ocazie într-un spectacol: open bar personalizat, coffee corner, perete cu Prosecco, flair bartending și o echipă gata de show.',
     },
     {
-      name: '🛠️ Închiriere logistică',
+      name: 'Logistică',
       description:
         'Îți punem la dispoziție tot ce ai nevoie pentru un bar complet echipat: baruri mobile, pahare, frigidere, dozatoare de bere și multe altele.',
     },
     {
-      name: '🏆 Antrenament',
+      name: 'Coaching',
       description:
         'De la tehnici de bază la show bartending – oferim coaching 1-la-1 și acces la un spațiu de antrenament dedicat pasionaților de mixologie.',
     },

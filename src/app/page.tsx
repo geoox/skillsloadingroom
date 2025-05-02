@@ -48,7 +48,7 @@ function Services() {
               <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:border-gray-300 hover:bg-red-50">
                 <div className="grid md:grid-cols-2 gap-4">
                   <h3 className="text-2xl font-semibold text-gray-900 transition-colors duration-300">
-                    🍸 Evenimente private
+                    Evenimente private
                   </h3>
                   <ul className="space-y-1 text-gray-700">
                     <li>Open bar / Catering</li>
@@ -64,7 +64,7 @@ function Services() {
               <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:border-gray-300 hover:bg-blue-50">
                 <div className="grid md:grid-cols-2 gap-4">
                   <h3 className="text-2xl font-semibold text-gray-900 transition-colors duration-300">
-                    🛵 Închiriere logistică
+                    Închiriere logistică
                   </h3>
                   <ul className="grid grid-cols-2 gap-x-4 gap-y-2 text-gray-700">
                     <li>Baruri</li>
@@ -83,7 +83,7 @@ function Services() {
               <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:border-gray-300 hover:bg-green-50">
                 <div className="grid md:grid-cols-2 gap-4">
                   <h3 className="text-2xl font-semibold text-gray-900 transition-colors duration-300">
-                    🏆 Antrenament
+                    Antrenament
                   </h3>
                   <ul className="space-y-1 text-gray-700">
                     <li>Coaching</li>
