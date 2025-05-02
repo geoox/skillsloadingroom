@@ -96,6 +96,34 @@ export default async function Home() {
 
   return (
     <div id="home">
+      <div className="relative h-screen w-screen overflow-hidden">
+        <iframe
+          src="https://www.youtube.com/embed/_GzmbWt6Lmw?autoplay=1&mute=1&controls=0&loop=1&showinfo=0&playsinline=1&rel=0&modestbranding=0&enablejsapi=1&playlist=_GzmbWt6Lmw"
+          title="SkillsLoadingRoom"
+          allow="autoplay; fullscreen; loop"
+          allowFullScreen
+          style={{
+            width: '300%',
+            height: '100%',
+            marginLeft: '-100%',
+            pointerEvents: 'none',
+          }}
+        />
+
+        <div className="absolute bottom-0 right-8 transform -translate-y-1/2 text-white text-xl z-10 font-display font-medium tracking-tight [text-wrap:balance] sm:text-7xl">
+          Skills Loading Room
+        </div>
+      </div>
+
+
+      <Services />
+
+      <AboutPage />
+
+      <Features />
+
+      <Team />
+
       <Container className="h-[80vh] mt-8 rounded-md relative overflow-hidden">
         <Image
           src={landingImg}
@@ -108,19 +136,11 @@ export default async function Home() {
         <div className="relative z-10">
           <FadeIn className="max-w-3xl">
             <h1 className="font-display text-5xl font-medium tracking-tight [text-wrap:balance] text-white sm:text-7xl">
-              Skills Loading Room
+              Evenimente
             </h1>
           </FadeIn>
         </div>
       </Container>
-
-      <Services />
-
-      <AboutPage />
-
-      <Features />
-
-      <Team />
 
       <Events />
 
