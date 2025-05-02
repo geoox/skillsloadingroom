@@ -2,22 +2,26 @@ import { FadeIn } from "./FadeIn"
 
 const cards = [
     {
-        name: '🍸 Evenimente private',
-        description: 'Open bar/Catering  ⦿ Coffee corner  ⦿ Ring for Prosecco wall ⦿ Show flair bartending  ⦿ Echipa barmani',
+      name: '🍸 Evenimente private',
+      description:
+        'Transformăm orice ocazie într-un spectacol: open bar personalizat, coffee corner, perete cu Prosecco, flair bartending și o echipă gata de show.',
     },
     {
-        name: '🧊 Inchriere logistica',
-        description: 'Baruri ⦿ Rafturi backbar ⦿ Pahare ⦿ Mese cocktail ⦿ Frigidere ⦿ ⁠Lăzi gheață  ⦿ ⁠Dozator bere ⦿ ⁠Aparatura bar ',
+      name: '🛠️ Închiriere logistică',
+      description:
+        'Îți punem la dispoziție tot ce ai nevoie pentru un bar complet echipat: baruri mobile, pahare, frigidere, dozatoare de bere și multe altele.',
     },
     {
-        name: '🥃 Antrenament',
-        description: 'Coaching ⦿ Spatiu antrenament',
+      name: '🏆 Antrenament',
+      description:
+        'De la tehnici de bază la show bartending – oferim coaching 1-la-1 și acces la un spațiu de antrenament dedicat pasionaților de mixologie.',
     },
-]
+  ]
+  
 
 export default function AboutPage() {
     return (
-        <FadeIn>
+        <FadeIn id="services">
             <div className="relative isolate overflow-hidden bg-gray-900 my-24 sm:py-32">
                 <img
                     alt=""
@@ -45,9 +49,8 @@ export default function AboutPage() {
                 <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
                     <div className="mx-auto max-w-2xl lg:mx-0">
                         <h2 className="font-display text-5xl font-semibold tracking-tight text-white sm:text-7xl">Servicii</h2>
-                        <p className="mt-8 text-pretty text-lg font-medium text-gray-400 sm:text-xl/8">
-                            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
-                            fugiat veniam occaecat fugiat.
+                        <p className="mt-8 text-pretty text-lg font-medium text-gray-300 sm:text-xl/8">
+                            Fie că organizezi un eveniment privat, ai nevoie de logistică pentru barul tău sau vrei să-ți îmbunătățești abilitățile de bartending, suntem aici cu soluții profesionale, stil și energie.
                         </p>
                     </div>
                     <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-8">

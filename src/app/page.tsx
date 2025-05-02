@@ -45,7 +45,7 @@ function Services() {
             <div className="mt-16 lg:mt-0 lg:w-1/2 space-y-8">
 
               {/* Card: Evenimente private */}
-              <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:border-gray-300 hover:bg-indigo-50">
+              <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:border-gray-300 hover:bg-red-50">
                 <div className="grid md:grid-cols-2 gap-4">
                   <h3 className="text-2xl font-semibold text-gray-900 transition-colors duration-300">
                     🍸 Evenimente private
@@ -136,7 +136,7 @@ export default async function Home() {
 
       <Features />
 
-      <Team />
+      {/* <Team /> */}
 
       <Container className="h-[80vh] mt-8 rounded-md relative overflow-hidden">
         <Image

@@ -19,16 +19,16 @@ export function Features(): JSX.Element {
   useEffect(() => {
     const handleScroll = (): void => {
       if (!containerRef.current) return;
-      
+
       const rect = containerRef.current.getBoundingClientRect();
       const viewportHeight = window.innerHeight;
-      
+
       // Calculate how far the element is from the center of the viewport
       // Normalized to a range roughly between -1 and 1
       const elementCenterY = rect.top + rect.height / 2;
       const viewportCenterY = viewportHeight / 2;
       const distanceFromCenter = (elementCenterY - viewportCenterY) / viewportHeight;
-      
+
       // Only apply effect when element is in view
       if (rect.bottom > 0 && rect.top < viewportHeight) {
         setParallaxOffset({
@@ -39,24 +39,24 @@ export function Features(): JSX.Element {
 
     // Initial calculation
     handleScroll();
-    
+
     window.addEventListener('scroll', handleScroll);
-    
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
   return (
-    <div 
+    <div
       ref={containerRef}
       className="bg-gradient-to-b from-white to-gray-300 py-12"
       id="despre-noi"
     >
       <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
-        <h2 className="font-display text-center text-base/7 font-semibold text-black">Tot ce ai nevoie, oricand</h2>
+        <h2 className="font-display text-center text-base/7 font-semibold text-black">Showcase</h2>
         <p className="font-display mx-auto mt-2 max-w-lg text-balance text-center text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl">
-          Cocktailurile noastre
+          Gusturi memorabile, servite cu stil
         </p>
         <div className="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
           <div className="relative lg:row-span-2">
@@ -64,19 +64,19 @@ export function Features(): JSX.Element {
             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
               <div className="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10 absolute z-50">
                 <p className="mt-2 text-3xl font-bold tracking-tight text-white max-lg:text-center">
-                  Descriere scurta
+                  Arta mixologiei la superlativ
                 </p>
               </div>
               <div className="relative min-h-[20rem] w-full grow [container-type:inline-size] max-lg:mx-auto max-lg:max-w-sm overflow-hidden">
-                <div 
+                <div
                   className="w-full h-full transition-transform duration-500 ease-out"
-                  style={{ 
+                  style={{
                     transform: `translateY(${parallaxOffset.y * 0.3}px) scale(1.1)`,
                   }}
                 >
-                  <Image 
-                    src={pahar2} 
-                    alt="drink" 
+                  <Image
+                    src={pahar2}
+                    alt="drink"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -84,25 +84,25 @@ export function Features(): JSX.Element {
             </div>
             <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 lg:rounded-l-[2rem]"></div>
           </div>
-          
+
           <div className="relative lg:row-span-2">
             <div className="absolute inset-px rounded-lg bg-white"></div>
             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]">
               <div className="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10 absolute z-50">
                 <p className="mt-2 text-3xl font-bold tracking-tight text-orange-600 max-lg:text-center">
-                  Descriere scurta 
+                  Gusturi memorabile, servite cu stil
                 </p>
               </div>
               <div className="relative min-h-[20rem] w-full grow [container-type:inline-size] max-lg:mx-auto max-lg:max-w-sm overflow-hidden">
-                <div 
+                <div
                   className="w-full h-full transition-transform duration-500 ease-out"
-                  style={{ 
+                  style={{
                     transform: `translateY(${parallaxOffset.y * 0.5}px) scale(1.1)`,
                   }}
                 >
-                  <Image 
-                    src={pahar6} 
-                    alt="drink" 
+                  <Image
+                    src={pahar6}
+                    alt="drink"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -115,19 +115,19 @@ export function Features(): JSX.Element {
             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)]">
               <div className="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10 absolute z-50">
                 <p className="mt-2 text-3xl font-bold tracking-tight text-red-800 max-lg:text-center">
-                  Descriere scurta
+                  Fiecare pahar spune o poveste
                 </p>
               </div>
               <div className="relative min-h-[30rem] w-full grow overflow-hidden">
-                <div 
+                <div
                   className="w-full h-full transition-transform duration-500 ease-out"
-                  style={{ 
+                  style={{
                     transform: `translateY(${parallaxOffset.y * 0.7}px) scale(1.1)`,
                   }}
                 >
-                  <Image 
-                    src={pahar4} 
-                    alt="drink" 
+                  <Image
+                    src={pahar4}
+                    alt="drink"
                     className="w-full h-full object-cover"
                   />
                 </div>
