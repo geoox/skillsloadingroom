@@ -40,19 +40,19 @@ export function Footer() {
             <div>
               <h3 className="text-sm font-semibold text-neutral-950">Company</h3>
               <ul className="mt-4 space-y-2 text-sm text-neutral-700">
-                <li><Link href="/about" className="hover:text-neutral-950">About Us</Link></li>
-                <li><Link href="/services" className="hover:text-neutral-950">Services</Link></li>
-                <li><Link href="/projects" className="hover:text-neutral-950">Projects</Link></li>
-                <li><Link href="/careers" className="hover:text-neutral-950">Careers</Link></li>
+                <li><Link href="#" className="hover:text-neutral-950">About Us</Link></li>
+                <li><Link href="#servicii" className="hover:text-neutral-950">Services</Link></li>
+                <li><Link href="#evenimente" className="hover:text-neutral-950">Projects</Link></li>
+                <li><Link href="#contact" className="hover:text-neutral-950">Call us</Link></li>
               </ul>
             </div>
 
             <div>
               <h3 className="text-sm font-semibold text-neutral-950">Legal</h3>
               <ul className="mt-4 space-y-2 text-sm text-neutral-700">
-                <li><Link href="/privacy" className="hover:text-neutral-950">Privacy Policy</Link></li>
-                <li><Link href="/terms" className="hover:text-neutral-950">Terms of Service</Link></li>
-                <li><Link href="/accessibility" className="hover:text-neutral-950">Accessibility</Link></li>
+                <li><Link href="#" className="hover:text-neutral-950">Privacy Policy</Link></li>
+                <li><Link href="#" className="hover:text-neutral-950">Terms of Service</Link></li>
+                <li><Link href="#" className="hover:text-neutral-950">Accessibility</Link></li>
               </ul>
             </div>
           </div>
@@ -91,7 +91,7 @@ export function Footer() {
           </Link>
           <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
             <p className="text-sm text-neutral-700">
-              © Studio Agency Inc. {new Date().getFullYear()}
+              © GDCph Inc. {new Date().getFullYear()}
             </p>
             <p className="text-sm text-neutral-700">
               All rights reserved.
