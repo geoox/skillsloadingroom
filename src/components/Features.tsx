@@ -71,7 +71,7 @@ export function Features(): JSX.Element {
                 <div
                   className="w-full h-full transition-transform duration-500 ease-out"
                   style={{
-                    transform: `translateY(${parallaxOffset.y * 0.3}px) scale(1.1)`,
+                    transform: `translateY(${parallaxOffset.y * 0.2}px) scale(1.1)`,
                   }}
                 >
                   <Image
@@ -97,7 +97,7 @@ export function Features(): JSX.Element {
                 <div
                   className="w-full h-full transition-transform duration-500 ease-out"
                   style={{
-                    transform: `translateY(${parallaxOffset.y * 0.5}px) scale(1.1)`,
+                    transform: `translateY(${parallaxOffset.y * 0.3}px) scale(1.1)`,
                   }}
                 >
                   <Image
@@ -122,7 +122,7 @@ export function Features(): JSX.Element {
                 <div
                   className="w-full h-full transition-transform duration-500 ease-out"
                   style={{
-                    transform: `translateY(${parallaxOffset.y * 0.7}px) scale(1.1)`,
+                    transform: `translateY(${parallaxOffset.y * 0.2}px) scale(1.1)`,
                   }}
                 >
                   <Image

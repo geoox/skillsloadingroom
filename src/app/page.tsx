@@ -114,7 +114,6 @@ export default async function Home() {
         <iframe
           src="https://www.youtube.com/embed/_GzmbWt6Lmw?autoplay=1&mute=1&controls=0&loop=1&showinfo=0&playsinline=1&rel=0&modestbranding=0&enablejsapi=1&playlist=_GzmbWt6Lmw"
           title="SkillsLoadingRoom"
-          allow="autoplay; fullscreen; loop"
           allowFullScreen
           style={{
             width: '300%',
@@ -138,7 +137,7 @@ export default async function Home() {
 
       {/* <Team /> */}
 
-      <Container className="h-[80vh] mt-8 rounded-md relative overflow-hidden">
+      <div className=" bg-gradient-to-b from-gray-300 to-white h-[80vh] rounded-md relative overflow-hidden">
         <Image
           src={landingImg}
           alt="Skills Loading Room background"
@@ -154,7 +153,7 @@ export default async function Home() {
             </h1>
           </FadeIn>
         </div>
-      </Container>
+      </div>
 
       <Events />
 

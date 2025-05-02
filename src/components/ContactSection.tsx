@@ -5,8 +5,8 @@ import { Offices } from '@/components/Offices'
 
 export function ContactSection() {
   return (
-    <div id='contact'>
-      <Container className="mt-24 sm:mt-32 lg:mt-40">
+    <div id='contact' className='bg-gradient-to-b from-gray-300 to-white'>
+      <Container className="pt-24 sm:pt-32 lg:pt-40">
         <FadeIn className="-mx-6 rounded-4xl bg-neutral-950 px-6 py-20 sm:mx-0 sm:py-32 md:px-12">
           <div className="mx-auto max-w-4xl" id='contact'>
             <div className="grid lg:grid-cols-2 grid-cols-1">

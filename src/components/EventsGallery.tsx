@@ -42,7 +42,7 @@ function Events() {
     };
 
     return (
-        <div id="evenimente">
+        <div id="evenimente" className='bg-gradient-to-b from-white to-gray-300'>
             <FadeIn>
                 <div className="max-w-7xl m-auto">
                     <div className="relative right-0">
