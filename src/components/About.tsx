@@ -49,7 +49,7 @@ export default function AboutPage() {
                 <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
                     <div className="mx-auto max-w-2xl lg:mx-0">
                         <h2 className="font-display text-5xl font-semibold tracking-tight text-white sm:text-7xl">Servicii</h2>
-                        <p className="mt-8 text-pretty text-lg font-medium text-gray-300 sm:text-xl/8">
+                        <p className="mt-8 text-pretty text-lg font-medium text-[aliceblue] sm:text-xl/8">
                             Fie că organizezi un eveniment privat, ai nevoie de logistică pentru barul tău sau vrei să-ți îmbunătățești abilitățile de bartending, suntem aici cu soluții profesionale, stil și energie.
                         </p>
                     </div>
@@ -58,7 +58,7 @@ export default function AboutPage() {
                             <div key={card.name} className="flex gap-x-4 rounded-xl bg-white/5 p-6 ring-1 ring-inset ring-white/10">
                                 <div className="text-base/7">
                                     <h3 className="font-semibold text-white text-2xl">{card.name}</h3>
-                                    <p className="mt-2 text-lg text-gray-300">{card.description}</p>
+                                    <p className="mt-2 text-lg text-[aliceblue]">{card.description}</p>
                                 </div>
                             </div>
                         ))}

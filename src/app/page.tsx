@@ -19,7 +19,7 @@ function Services() {
     <div id="servicii">
       <FadeIn>
         <SectionIntro
-          eyebrow="Servicii"
+          eyebrow=""
           title="Suntem aici să te ajutăm!"
           className="mt-24 sm:mt-32 lg:mt-40"
         >
@@ -42,7 +42,7 @@ function Services() {
             </div>
 
             {/* Right Services List */}
-            <div className="mt-16 lg:mt-0 lg:w-1/2 space-y-8">
+            <div className="mt-16 lg:mt-0 lg:w-1/2 space-y-8 hidden md:block">
 
               {/* Card: Evenimente private */}
               <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:border-gray-300 hover:bg-red-50">
