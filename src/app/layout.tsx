@@ -7,7 +7,7 @@ import '@/styles/tailwind.css'
 export const metadata: Metadata = {
   title: {
     template: 'Skills Loading Room',
-    default: 'Open bar services, catering, training room',
+    default: 'Skills Loading Room - Open bar services, catering, training room',
   },
 }
 
