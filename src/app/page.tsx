@@ -103,7 +103,7 @@ function Services() {
 
 export const metadata: Metadata = {
   description:
-    'We are a development studio working at the intersection of design and technology.',
+    'Servicii profesionale de bartender pentru evenimente private, corporate și petreceri, oriunde în România.',
 }
 
 export default async function Home() {
