@@ -85,15 +85,15 @@ export function Footer() {
           </ul>
         </div>
 
-        <div className="mt-12 mb-20 flex flex-wrap items-end justify-between gap-x-6 gap-y-4 border-t border-neutral-950/10 pt-12">
+        <div className="bg-black rounded-lg p-8 text-white mt-12 mb-20 flex flex-wrap items-end justify-between gap-x-6 gap-y-4 border-t border-neutral-950/10 pt-12">
           <Link href="/" aria-label="Home">
             <Logo className="h-8" fillOnHover />
           </Link>
           <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
-            <p className="text-sm text-neutral-700">
+            <p className="text-sm text-gray-400">
               © GDCph Inc. {new Date().getFullYear()}
             </p>
-            <p className="text-sm text-neutral-700">
+            <p className="text-sm text-gray-400">
               All rights reserved.
             </p>
           </div>
