@@ -1,0 +1,58 @@
+export const CACHED_REVIEWS = [
+  {
+    author_name: 'Eusebiu George',
+    rating: 5,
+    relative_time_description: 'a month ago',
+    text: 'Amazing mobile bar for events! Very professional team, great bartenders and excellent service. They create a great vibe and deliver quality drinks every time. Highly recommended for any event!',
+    profile_photo_url: 'https://lh3.googleusercontent.com/a-/ALV-UjWpJ168Ge0bmE5-VPq_h9eJKIGpDEQDR7HyHJ7MgPaordAVqdmM=s1920',
+  },
+  {
+    author_name: 'Daniel G',
+    rating: 5,
+    relative_time_description: 'a month ago',
+    text: "Fun, professional and full of energy, the kind of team that makes your event feel perfect. I'm glad i got the chance to know them and enjoyed great times togheter!",
+    profile_photo_url: 'https://lh3.googleusercontent.com/a/ACg8ocIzcpTEX9txPah8tWLaXCNnYo9BXFRo1Gpp9VcLMXs5OXrSww=s1920',
+  },
+  {
+    author_name: 'Isabela Doroftei',
+    rating: 5,
+    relative_time_description: '4 weeks ago',
+    text: 'Well organized and professional team, showing great care when it comes to service quality. Very cozy atmosphere with a great vibe, I recommend it.',
+    profile_photo_url: 'https://lh3.googleusercontent.com/a-/ALV-UjVUOYORu9tL2xE_rOjgD05nBuJeiW9iESq4bLLK88uTEdVduyc=s1920',
+  },
+  {
+    author_name: 'Cosmin Marinescu',
+    rating: 5,
+    relative_time_description: 'a year ago',
+    text: 'salon 10/10',
+    profile_photo_url: 'https://lh3.googleusercontent.com/a-/ALV-UjUs7dh1aSqScfAhj5syZKIye5_LZmcQeORlETKrcPrkzRmPv_mo5w=s1920',
+  },
+  {
+    author_name: 'Robert Petrescu',
+    rating: 5,
+    relative_time_description: 'a month ago',
+    text: 'Un grup de oameni minunati care au contribuit la o atmosfera deosebita la botezul din familia noastra. Au fost mereu zambitori, glumeti si extrem de profesionisti, reusind sa ne faca sa ne simtim relaxati si sa ne bucuram din plin de eveniment. Implicarea si energia lor pozitiva au facut ca totul sa decurga perfect.',
+    profile_photo_url: 'https://lh3.googleusercontent.com/a/ACg8ocJHg0b0c2TTHI145MFzrUCxFa2Lf44izOIEZtPciykZKd8-Kw=s1920',
+  },
+  {
+    author_name: 'Catalin Ovedenie',
+    rating: 5,
+    relative_time_description: 'a month ago',
+    text: 'Echipa foarte faina si profesionista! S-au ocupat de tot, de la inceput pana la final, iar noi ne-am putut bucura de eveniment fara niciun stres. Comunicarea a fost excelenta si s-a simtit ca le pasa cu adevarat. Cu siguranta voi mai apela la ei. Recomand cu mare incredere!',
+    profile_photo_url: 'https://lh3.googleusercontent.com/a/ACg8ocJ6D4oHCOyMiGcfn-a9yxNvqEFrb-oqaimJvyhdNvHEIuqbBA=s1920',
+  },
+  {
+    author_name: 'Ana Cosa',
+    rating: 5,
+    relative_time_description: 'a month ago',
+    text: 'Recomand! O echipa super misto. Am ramas placut surprinsa cat de atenti au fost la invitatii nostri ca sa fie toata lumea multumita... baieti, ne-ati facut evenimentul de neuitat',
+    profile_photo_url: 'https://lh3.googleusercontent.com/a-/ALV-UjUaPx9N4nFiWKHwS78SYHK5iqzVRfFC1_HWCFPhmimwmLw6zzJz=s1920',
+  },
+  {
+    author_name: 'daniela tanase',
+    rating: 5,
+    relative_time_description: 'a month ago',
+    text: 'Cea mai tare experienta!!! Profesionisti, isi cunosc foarte bine meseria, stiu exact ce si cat sa puna ca sa iasa cele mai bune bauturi si peste toate au si umor, ingredient care face orice eveniment de neuitat!\nMultumesc baieti!\nIi recomand cu toata inima!!!',
+    profile_photo_url: 'https://lh3.googleusercontent.com/a/ACg8ocIteO9_p40SHRzc0DnxP9Qx29kIUN5NkWz-TZp7FO-dZFfirg=s1920',
+  },
+]

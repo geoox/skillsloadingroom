@@ -6,3 +6,6 @@
   font-stretch: 75% 125%;
   src: url('../fonts/Mona-Sans.var.woff2') format('woff2');
 }
+
+/* enable smooth scrolling for anchor links */
+html { scroll-behavior: smooth; }

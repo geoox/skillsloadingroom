@@ -13,7 +13,9 @@ import Team from '@/components/Team'
 import logistica1 from '@/images/logistica1.jpeg';
 import AboutPage from '@/components/About'
 import { StylizedImage } from '@/components/StylizedImage'
-
+import OfferForm from '@/components/OfferForm' 
+import FloatingSocials from '@/components/FloatingSocials'
+import GoogleReviews from '@/components/GoogleReviews'
 function Services() {
   return (
     <div id="servicii">
@@ -123,11 +125,36 @@ export default async function Home() {
           }}
         />
 
-        <div className="absolute bottom-0 right-8 transform -translate-y-1/2 text-white text-xl z-10 font-display font-medium tracking-tight [text-wrap:balance] sm:text-7xl">
+        <div className="absolute bottom-0 right-8 transform -translate-y-1/2 text-white text-xl z-10 font-display font-medium tracking-tight [text-wrap:balance] sm:text-7xl hidden md:block">
           Skills Loading Room
         </div>
       </div>
 
+      <div className="fixed right-6 top-1/2 z-50 -translate-y-1/2 transform flex flex-col items-end gap-4">
+        <a
+          href="#ask-offer"
+          className="rounded-full bg-neutral-950 px-5 py-3 text-base font-semibold text-white shadow-lg hover:bg-neutral-800 hover:scale-105 transition-transform focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-900"
+          aria-label="Ask for an offer"
+          title="Cere o ofertă"
+        >
+          <svg 
+      viewBox="0 0 24 24" 
+      fill="none" 
+      stroke="currentColor" 
+      strokeWidth="2" 
+      strokeLinecap="round" 
+      strokeLinejoin="round" 
+      aria-hidden="true" 
+      className='w-4 h-4 inline-block mx-2'
+    >
+      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+      <polyline points="22,6 12,13 2,6" />
+    </svg>
+          Cere o ofertă
+        </a>
+
+        <FloatingSocials />
+      </div>
 
       <Services />
 
@@ -156,6 +183,10 @@ export default async function Home() {
       </div>
 
       <Events />
+
+      <GoogleReviews />
+
+      <OfferForm />
 
       <ContactSection />
     </div>
