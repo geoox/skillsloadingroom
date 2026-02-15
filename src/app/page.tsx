@@ -45,55 +45,37 @@ function Services() {
 
             {/* Right Services List */}
             <div className="mt-16 lg:mt-0 lg:w-1/2 space-y-8 hidden md:block">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6 hover:scale-[1.02] hover:shadow-lg transition-all">
+                  <h4 className="text-xl font-semibold text-gray-900">Open Bar</h4>
+                  <p className="mt-2 text-sm text-gray-700">Bar complet la fața locului cu cocktailuri personalizate.</p>
+                </div>
 
-              {/* Card: Evenimente private */}
-              <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:border-gray-300 hover:bg-red-50">
-                <div className="grid md:grid-cols-2 gap-4">
-                  <h3 className="text-2xl font-semibold text-gray-900 transition-colors duration-300">
-                    Evenimente private
-                  </h3>
-                  <ul className="space-y-1 text-gray-700">
-                    <li>Open bar / Catering</li>
-                    <li>Coffee corner</li>
-                    <li>Ring for Prosecco wall</li>
-                    <li>Show flair bartending</li>
-                    <li>Echipă barmani</li>
-                  </ul>
+                <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6 hover:scale-[1.02] hover:shadow-lg transition-all">
+                  <h4 className="text-xl font-semibold text-gray-900">Coffee Corner</h4>
+                  <p className="mt-2 text-sm text-gray-700">Colțișor de cafea cu barista și echipament profesional.</p>
+                </div>
+
+                <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6 hover:scale-[1.02] hover:shadow-lg transition-all">
+                  <h4 className="text-xl font-semibold text-gray-900">Ring for Prosecco Wall</h4>
+                  <p className="mt-2 text-sm text-gray-700">Perete de Prosecco pregătit pentru toasturi și photo‑op.</p>
+                </div>
+
+                <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6 hover:scale-[1.02] hover:shadow-lg transition-all">
+                  <h4 className="text-xl font-semibold text-gray-900">Flair Bartending Show</h4>
+                  <p className="mt-2 text-sm text-gray-700">Spectacol flair — jonglerii și demonstrații live.</p>
+                </div>
+
+                <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6 hover:scale-[1.02] hover:shadow-lg transition-all">
+                  <h4 className="text-xl font-semibold text-gray-900">Închiriere logistică</h4>
+                  <p className="mt-2 text-sm text-gray-700">Echipamente și mobilier bar (frigidere, pahare, mese).</p>
+                </div>
+
+                <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6 hover:scale-[1.02] hover:shadow-lg transition-all">
+                  <h4 className="text-xl font-semibold text-gray-900">Flair Room</h4>
+                  <p className="mt-2 text-sm text-gray-700">Spațiu dedicat pentru antrenamente și demonstrații flair.</p>
                 </div>
               </div>
-
-              {/* Card: Închiriere logistică */}
-              <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:border-gray-300 hover:bg-blue-50">
-                <div className="grid md:grid-cols-2 gap-4">
-                  <h3 className="text-2xl font-semibold text-gray-900 transition-colors duration-300">
-                    Închiriere logistică
-                  </h3>
-                  <ul className="grid grid-cols-2 gap-x-4 gap-y-2 text-gray-700">
-                    <li>Baruri</li>
-                    <li>Rafturi backbar</li>
-                    <li>Pahare</li>
-                    <li>Mese cocktail</li>
-                    <li>Frigidere</li>
-                    <li>Lăzi gheață</li>
-                    <li>Dozator bere</li>
-                    <li>Aparatură bar</li>
-                  </ul>
-                </div>
-              </div>
-
-              {/* Card: Antrenament */}
-              <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:border-gray-300 hover:bg-green-50">
-                <div className="grid md:grid-cols-2 gap-4">
-                  <h3 className="text-2xl font-semibold text-gray-900 transition-colors duration-300">
-                    Antrenament
-                  </h3>
-                  <ul className="space-y-1 text-gray-700">
-                    <li>Coaching</li>
-                    <li>Spațiu antrenament</li>
-                  </ul>
-                </div>
-              </div>
-
             </div>
           </div>
         </Container>

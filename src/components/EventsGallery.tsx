@@ -34,7 +34,7 @@ import image35 from '../images/image00035.jpeg';
 
 function Events() {
     // State to keep track of active tab
-    const [activeTab, setActiveTab] = useState('app');
+    const [activeTab, setActiveTab] = useState('open-bar');
 
     // Function to handle tab switching
     const handleTabChange = (tabId: string) => {
@@ -51,53 +51,102 @@ function Events() {
                                 <ul className="relative flex flex-wrap px-1.5 py-1.5 list-none rounded-md bg-slate-100" role="list">
                                     <li className="z-30 flex-auto text-center">
                                         <a
-                                            className={`z-30 flex items-center justify-center w-full px-0 py-2 text-lg mb-0 transition-all ease-in-out border-0 rounded-lg cursor-pointer ${activeTab === 'app'
+                                            className={`z-30 flex items-center justify-center w-full px-0 py-2 text-lg mb-0 transition-all ease-in-out border-0 rounded-lg cursor-pointer ${activeTab === 'open-bar'
                                                     ? 'font-bold shadow-md text-white bg-black'
                                                     : 'text-slate-700 bg-inherit'
                                                 }`}
-                                            onClick={() => handleTabChange('app')}
+                                            onClick={() => handleTabChange('open-bar')}
                                             role="tab"
-                                            aria-selected={activeTab === 'app'}
-                                            aria-controls="app"
+                                            aria-selected={activeTab === 'open-bar'}
+                                            aria-controls="open-bar"
                                         >
-                                            <span className="ml-1">Private</span>
+                                            <span className="ml-1">Open Bar</span>
                                         </a>
                                     </li>
+
                                     <li className="z-30 flex-auto text-center">
                                         <a
-                                            className={`z-30 flex items-center justify-center w-full px-0 py-2 text-lg mb-0 transition-all ease-in-out border-0 rounded-lg cursor-pointer ${activeTab === 'message'
+                                            className={`z-30 flex items-center justify-center w-full px-0 py-2 text-lg mb-0 transition-all ease-in-out border-0 rounded-lg cursor-pointer ${activeTab === 'coffee-corner'
                                                     ? 'font-bold shadow-md text-white bg-black'
                                                     : 'text-slate-700 bg-inherit'
                                                 }`}
-                                            onClick={() => handleTabChange('message')}
+                                            onClick={() => handleTabChange('coffee-corner')}
                                             role="tab"
-                                            aria-selected={activeTab === 'message'}
-                                            aria-controls="message"
+                                            aria-selected={activeTab === 'coffee-corner'}
+                                            aria-controls="coffee-corner"
                                         >
-                                            <span className="ml-1">Corporate</span>
+                                            <span className="ml-1">Coffee Corner</span>
                                         </a>
                                     </li>
+
                                     <li className="z-30 flex-auto text-center">
                                         <a
-                                            className={`z-30 flex items-center justify-center w-full px-0 py-2 text-lg mb-0 transition-all ease-in-out border-0 rounded-lg cursor-pointer ${activeTab === 'settings'
+                                            className={`z-30 flex items-center justify-center w-full px-0 py-2 text-lg mb-0 transition-all ease-in-out border-0 rounded-lg cursor-pointer ${activeTab === 'prosecco-wall'
                                                     ? 'font-bold shadow-md text-white bg-black'
                                                     : 'text-slate-700 bg-inherit'
                                                 }`}
-                                            onClick={() => handleTabChange('settings')}
+                                            onClick={() => handleTabChange('prosecco-wall')}
                                             role="tab"
-                                            aria-selected={activeTab === 'settings'}
-                                            aria-controls="settings"
+                                            aria-selected={activeTab === 'prosecco-wall'}
+                                            aria-controls="prosecco-wall"
                                         >
-                                            <span className="ml-1">Festivaluri</span>
+                                            <span className="ml-1">Ring for Prosecco Wall</span>
+                                        </a>
+                                    </li>
+
+                                    <li className="z-30 flex-auto text-center">
+                                        <a
+                                            className={`z-30 flex items-center justify-center w-full px-0 py-2 text-lg mb-0 transition-all ease-in-out border-0 rounded-lg cursor-pointer ${activeTab === 'flair-show'
+                                                    ? 'font-bold shadow-md text-white bg-black'
+                                                    : 'text-slate-700 bg-inherit'
+                                                }`}
+                                            onClick={() => handleTabChange('flair-show')}
+                                            role="tab"
+                                            aria-selected={activeTab === 'flair-show'}
+                                            aria-controls="flair-show"
+                                        >
+                                            <span className="ml-1">Flair Bartending Show</span>
+                                        </a>
+                                    </li>
+
+                                    <li className="z-30 flex-auto text-center">
+                                        <a
+                                            className={`z-30 flex items-center justify-center w-full px-0 py-2 text-lg mb-0 transition-all ease-in-out border-0 rounded-lg cursor-pointer ${activeTab === 'logistica'
+                                                    ? 'font-bold shadow-md text-white bg-black'
+                                                    : 'text-slate-700 bg-inherit'
+                                                }`}
+                                            onClick={() => handleTabChange('logistica')}
+                                            role="tab"
+                                            aria-selected={activeTab === 'logistica'}
+                                            aria-controls="logistica"
+                                        >
+                                            <span className="ml-1">Închiriere logistică</span>
+                                        </a>
+                                    </li>
+
+                                    <li className="z-30 flex-auto text-center">
+                                        <a
+                                            className={`z-30 flex items-center justify-center w-full px-0 py-2 text-lg mb-0 transition-all ease-in-out border-0 rounded-lg cursor-pointer ${activeTab === 'coaching'
+                                                    ? 'font-bold shadow-md text-white bg-black'
+                                                    : 'text-slate-700 bg-inherit'
+                                                }`}
+                                            onClick={() => handleTabChange('coaching')}
+                                            role="tab"
+                                            aria-selected={activeTab === 'coaching'}
+                                            aria-controls="coaching"
+                                        >
+                                            <span className="ml-1">Coaching</span>
                                         </a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                         <div className="p-5">
+
+                            {/* Open Bar */}
                             <div
-                                className={`${activeTab === 'app' ? 'block' : 'hidden'} transition-opacity duration-150 ease-linear`}
-                                id="app"
+                                className={`${activeTab === 'open-bar' ? 'block' : 'hidden'} transition-opacity duration-150 ease-linear`}
+                                id="open-bar"
                                 role="tabpanel"
                             >
                                 <div className="grid grid-cols-12 gap-4 p-4">
@@ -105,7 +154,7 @@ function Events() {
                                         <div className="relative w-full h-64 rounded-lg shadow-md overflow-hidden">
                                             <Image 
                                                 src={image6}
-                                                alt="Bartender mixing cocktail"
+                                                alt="Bar - Open Bar"
                                                 fill
                                                 style={{ objectFit: 'cover' }}
                                             />
@@ -115,7 +164,7 @@ function Events() {
                                         <div className="relative w-full h-64 rounded-lg shadow-md overflow-hidden">
                                             <Image 
                                                 src={image26}
-                                                alt="Whiskey pouring"
+                                                alt="Open bar detail"
                                                 fill
                                                 style={{ objectFit: 'cover' }}
                                             />
@@ -125,7 +174,7 @@ function Events() {
                                         <div className="relative w-full h-40 rounded-lg shadow-md overflow-hidden">
                                             <Image 
                                                 src={image22}
-                                                alt="Bartender tools"
+                                                alt="Bar tools"
                                                 fill
                                                 style={{ objectFit: 'cover' }}
                                             />
@@ -145,7 +194,7 @@ function Events() {
                                         <div className="relative w-full h-40 rounded-lg shadow-md overflow-hidden">
                                             <Image 
                                                 src={image10}
-                                                alt="Bartender pouring wine"
+                                                alt="Pouring cocktail"
                                                 fill
                                                 style={{ objectFit: 'cover' }}
                                             />
@@ -155,17 +204,7 @@ function Events() {
                                         <div className="relative w-full h-48 rounded-lg shadow-md overflow-hidden">
                                             <Image 
                                                 src={image5}
-                                                alt="Elegant bar counter"
-                                                fill
-                                                style={{ objectFit: 'cover' }}
-                                            />
-                                        </div>
-                                    </div>
-                                    <div className="col-span-12 md:col-span-5">
-                                        <div className="relative w-full h-48 rounded-lg shadow-md overflow-hidden">
-                                            <Image 
-                                                src={image34}
-                                                alt="Bartender pouring cocktail"
+                                                alt="Bar counter"
                                                 fill
                                                 style={{ objectFit: 'cover' }}
                                             />
@@ -173,206 +212,199 @@ function Events() {
                                     </div>
                                 </div>
                             </div>
+
+                            {/* Coffee Corner */}
                             <div
-                                className={`${activeTab === 'message' ? 'block' : 'hidden'} transition-opacity duration-150 ease-linear`}
-                                id="message"
+                                className={`${activeTab === 'coffee-corner' ? 'block' : 'hidden'} transition-opacity duration-150 ease-linear`}
+                                id="coffee-corner"
                                 role="tabpanel"
                             >
                                 <div className="grid grid-cols-12 gap-4 p-4">
                                     <div className="col-span-12 md:col-span-6">
                                         <div className="relative w-full h-56 rounded-lg shadow-md overflow-hidden">
-                                            <Image 
-                                                src={image13}
-                                                alt="Corporate bartending event"
-                                                fill
-                                                style={{ objectFit: 'cover' }}
-                                            />
+                                            <Image src={coffee1} alt="Coffee corner" fill style={{ objectFit: 'cover' }} />
                                         </div>
                                     </div>
                                     <div className="col-span-6 md:col-span-3">
                                         <div className="relative w-full h-56 rounded-lg shadow-md overflow-hidden">
-                                            <Image 
-                                                src={image14}
-                                                alt="Bartender serving champagne"
-                                                fill
-                                                style={{ objectFit: 'cover' }}
-                                            />
+                                            <Image src={image17} alt="Coffee service" fill style={{ objectFit: 'cover' }} />
                                         </div>
                                     </div>
                                     <div className="col-span-6 md:col-span-3">
                                         <div className="relative w-full h-56 rounded-lg shadow-md overflow-hidden">
-                                            <Image 
-                                                src={image19}
-                                                alt="Professional bartender"
-                                                fill
-                                                style={{ objectFit: 'cover' }}
-                                            />
-                                        </div>
-                                    </div>
-                                    <div className="col-span-6 md:col-span-4">
-                                        <div className="relative w-full h-40 rounded-lg shadow-md overflow-hidden">
-                                            <Image 
-                                                src={image20}
-                                                alt="Mobile bar setup"
-                                                fill
-                                                style={{ objectFit: 'cover' }}
-                                            />
-                                        </div>
-                                    </div>
-                                    <div className="col-span-6 md:col-span-8">
-                                        <div className="relative w-full h-40 rounded-lg shadow-md overflow-hidden">
-                                            <Image 
-                                                src={image21}
-                                                alt="Corporate cocktail service"
-                                                fill
-                                                style={{ objectFit: 'cover' }}
-                                            />
-                                        </div>
-                                    </div>
-                                    <div className="col-span-4 md:col-span-3">
-                                        <div className="relative w-full h-44 rounded-lg shadow-md overflow-hidden">
-                                            <Image 
-                                                src={image17}
-                                                alt="Bartender pouring cocktail"
-                                                fill
-                                                style={{ objectFit: 'cover' }}
-                                            />
-                                        </div>
-                                    </div>
-                                    <div className="col-span-8 md:col-span-5">
-                                        <div className="relative w-full h-44 rounded-lg shadow-md overflow-hidden">
-                                            <Image 
-                                                src={image28}
-                                                alt="Professional wine service"
-                                                fill
-                                                style={{ objectFit: 'cover' }}
-                                            />
+                                            <Image src={image28} alt="Coffee setup" fill style={{ objectFit: 'cover' }} />
                                         </div>
                                     </div>
                                     <div className="col-span-12 md:col-span-4">
-                                        <div className="relative w-full h-44 rounded-lg shadow-md overflow-hidden">
-                                            <Image 
-                                                src={coffee1}
-                                                alt="Corporate bar setup"
-                                                fill
-                                                style={{ objectFit: 'cover' }}
-                                            />
+                                        <div className="relative w-full h-40 rounded-lg shadow-md overflow-hidden">
+                                            <Image src={image20} alt="Bar equipment" fill style={{ objectFit: 'cover' }} />
+                                        </div>
+                                    </div>
+                                    <div className="col-span-12 md:col-span-8">
+                                        <div className="relative w-full h-40 rounded-lg shadow-md overflow-hidden">
+                                            <Image src={image21} alt="Service" fill style={{ objectFit: 'cover' }} />
                                         </div>
                                     </div>
                                 </div>
                             </div>
+
+                            {/* Prosecco Wall */}
                             <div
-                                className={`${activeTab === 'settings' ? 'block' : 'hidden'} transition-opacity duration-150 ease-linear`}
-                                id="settings"
+                                className={`${activeTab === 'prosecco-wall' ? 'block' : 'hidden'} transition-opacity duration-150 ease-linear`}
+                                id="prosecco-wall"
+                                role="tabpanel"
+                            >
+                                <div className="grid grid-cols-12 gap-4 p-4">
+                                    <div className="col-span-12 md:col-span-6">
+                                        <div className="relative w-full h-56 rounded-lg shadow-md overflow-hidden">
+                                            <Image src={image14} alt="Prosecco wall" fill style={{ objectFit: 'cover' }} />
+                                        </div>
+                                    </div>
+                                    <div className="col-span-6 md:col-span-3">
+                                        <div className="relative w-full h-56 rounded-lg shadow-md overflow-hidden">
+                                            <Image src={image13} alt="Champagne service" fill style={{ objectFit: 'cover' }} />
+                                        </div>
+                                    </div>
+                                    <div className="col-span-6 md:col-span-3">
+                                        <div className="relative w-full h-56 rounded-lg shadow-md overflow-hidden">
+                                            <Image src={image11} alt="Glasses" fill style={{ objectFit: 'cover' }} />
+                                        </div>
+                                    </div>
+                                    <div className="col-span-12 md:col-span-4">
+                                        <div className="relative w-full h-40 rounded-lg shadow-md overflow-hidden">
+                                            <Image src={image10} alt="Pour" fill style={{ objectFit: 'cover' }} />
+                                        </div>
+                                    </div>
+                                    <div className="col-span-12 md:col-span-8">
+                                        <div className="relative w-full h-40 rounded-lg shadow-md overflow-hidden">
+                                            <Image src={image5} alt="Prosecco event" fill style={{ objectFit: 'cover' }} />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Flair Show */}
+                            <div
+                                className={`${activeTab === 'flair-show' ? 'block' : 'hidden'} transition-opacity duration-150 ease-linear`}
+                                id="flair-show"
                                 role="tabpanel"
                             >
                                 <div className="grid grid-cols-12 gap-4 p-4">
                                     <div className="col-span-12 md:col-span-5">
                                         <div className="relative w-full h-64 rounded-lg shadow-md overflow-hidden">
-                                            <Image 
-                                                src={image21}
-                                                alt="Festival bar setup"
-                                                fill
-                                                style={{ objectFit: 'cover' }}
-                                            />
+                                            <Image src={image22} alt="Flair show" fill style={{ objectFit: 'cover' }} />
                                         </div>
                                     </div>
                                     <div className="col-span-12 md:col-span-7">
                                         <div className="grid grid-cols-12 gap-4 h-full">
                                             <div className="col-span-12">
                                                 <div className="relative w-full h-32 rounded-lg shadow-md overflow-hidden">
-                                                    <Image 
-                                                        src={image22}
-                                                        alt="Festival crowd at bar"
-                                                        fill
-                                                        style={{ objectFit: 'cover' }}
-                                                    />
+                                                    <Image src={image3} alt="Performance" fill style={{ objectFit: 'cover' }} />
                                                 </div>
                                             </div>
                                             <div className="col-span-6">
                                                 <div className="relative w-full h-28 rounded-lg shadow-md overflow-hidden">
-                                                    <Image 
-                                                        src={image23}
-                                                        alt="Bartender at festival"
-                                                        fill
-                                                        style={{ objectFit: 'cover' }}
-                                                    />
+                                                    <Image src={image23} alt="Flair action" fill style={{ objectFit: 'cover' }} />
                                                 </div>
                                             </div>
                                             <div className="col-span-6">
                                                 <div className="relative w-full h-28 rounded-lg shadow-md overflow-hidden">
-                                                    <Image 
-                                                        src={image24}
-                                                        alt="Festival drinks"
-                                                        fill
-                                                        style={{ objectFit: 'cover' }}
-                                                    />
+                                                    <Image src={image27} alt="Flair juggling" fill style={{ objectFit: 'cover' }} />
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div className="col-span-4 md:col-span-3">
                                         <div className="relative w-full h-40 rounded-lg shadow-md overflow-hidden">
-                                            <Image 
-                                                src={image25}
-                                                alt="Outdoor bar"
-                                                fill
-                                                style={{ objectFit: 'cover' }}
-                                            />
+                                            <Image src={image28} alt="Show close-up" fill style={{ objectFit: 'cover' }} />
                                         </div>
                                     </div>
                                     <div className="col-span-4 md:col-span-3">
                                         <div className="relative w-full h-40 rounded-lg shadow-md overflow-hidden">
-                                            <Image 
-                                                src={image26}
-                                                alt="Festival bartender in action"
-                                                fill
-                                                style={{ objectFit: 'cover' }}
-                                            />
+                                            <Image src={image29} alt="Flair movement" fill style={{ objectFit: 'cover' }} />
                                         </div>
                                     </div>
                                     <div className="col-span-4 md:col-span-3">
                                         <div className="relative w-full h-40 rounded-lg shadow-md overflow-hidden">
-                                            <Image 
-                                                src={image13}
-                                                alt="Colorful festival cocktails"
-                                                fill
-                                                style={{ objectFit: 'cover' }}
-                                            />
-                                        </div>
-                                    </div>
-                                    <div className="col-span-12 md:col-span-3">
-                                        <div className="relative w-full h-40 rounded-lg shadow-md overflow-hidden">
-                                            <Image 
-                                                src={image7}
-                                                alt="Night bar at festival"
-                                                fill
-                                                style={{ objectFit: 'cover' }}
-                                            />
-                                        </div>
-                                    </div>
-                                    <div className="col-span-6 md:col-span-6">
-                                        <div className="relative w-full h-48 rounded-lg shadow-md overflow-hidden">
-                                            <Image 
-                                                src={image35}
-                                                alt="Festival outdoor bar panorama"
-                                                fill
-                                                style={{ objectFit: 'cover' }}
-                                            />
-                                        </div>
-                                    </div>
-                                    <div className="col-span-6 md:col-span-6">
-                                        <div className="relative w-full h-48 rounded-lg shadow-md overflow-hidden">
-                                            <Image 
-                                                src={image3}
-                                                alt="Bartenders serving crowd"
-                                                fill
-                                                style={{ objectFit: 'cover' }}
-                                            />
+                                            <Image src={image13} alt="Crowd enjoying show" fill style={{ objectFit: 'cover' }} />
                                         </div>
                                     </div>
                                 </div>
                             </div>
+
+                            {/* Închiriere logistică */}
+                            <div
+                                className={`${activeTab === 'logistica' ? 'block' : 'hidden'} transition-opacity duration-150 ease-linear`}
+                                id="logistica"
+                                role="tabpanel"
+                            >
+                                <div className="grid grid-cols-12 gap-4 p-4">
+                                    <div className="col-span-12 md:col-span-6">
+                                        <div className="relative w-full h-56 rounded-lg shadow-md overflow-hidden">
+                                            <Image src={image20} alt="Logistică - mobile bar" fill style={{ objectFit: 'cover' }} />
+                                        </div>
+                                    </div>
+                                    <div className="col-span-6 md:col-span-3">
+                                        <div className="relative w-full h-56 rounded-lg shadow-md overflow-hidden">
+                                            <Image src={image25} alt="Equipment" fill style={{ objectFit: 'cover' }} />
+                                        </div>
+                                    </div>
+                                    <div className="col-span-6 md:col-span-3">
+                                        <div className="relative w-full h-56 rounded-lg shadow-md overflow-hidden">
+                                            <Image src={image24} alt="Frigidere și accesorii" fill style={{ objectFit: 'cover' }} />
+                                        </div>
+                                    </div>
+                                    <div className="col-span-12 md:col-span-4">
+                                        <div className="relative w-full h-40 rounded-lg shadow-md overflow-hidden">
+                                            <Image src={image26} alt="Logistică - detaliu" fill style={{ objectFit: 'cover' }} />
+                                        </div>
+                                    </div>
+                                    <div className="col-span-12 md:col-span-8">
+                                        <div className="relative w-full h-40 rounded-lg shadow-md overflow-hidden">
+                                            <Image src={image21} alt="Bar setup" fill style={{ objectFit: 'cover' }} />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Coaching */}
+                            <div
+                                className={`${activeTab === 'coaching' ? 'block' : 'hidden'} transition-opacity duration-150 ease-linear`}
+                                id="coaching"
+                                role="tabpanel"
+                            >
+                                <div className="p-4">
+                                  <p className="mb-6 text-gray-700 max-w-3xl">De la tehnici de bază la show bartending – oferim coaching 1-la-1 și acces la un spațiu de antrenament dedicat pasionaților de mixologie.</p>
+                                </div>
+                                <div className="grid grid-cols-12 gap-4 p-4">
+                                    <div className="col-span-12 md:col-span-6">
+                                        <div className="relative w-full h-56 rounded-lg shadow-md overflow-hidden">
+                                            <Image src={image35} alt="Coaching / Flair room space" fill style={{ objectFit: 'cover' }} />
+                                        </div>
+                                    </div>
+                                    <div className="col-span-6 md:col-span-3">
+                                        <div className="relative w-full h-56 rounded-lg shadow-md overflow-hidden">
+                                            <Image src={image3} alt="Training room" fill style={{ objectFit: 'cover' }} />
+                                        </div>
+                                    </div>
+                                    <div className="col-span-6 md:col-span-3">
+                                        <div className="relative w-full h-56 rounded-lg shadow-md overflow-hidden">
+                                            <Image src={image34} alt="Practice session" fill style={{ objectFit: 'cover' }} />
+                                        </div>
+                                    </div>
+                                    <div className="col-span-12 md:col-span-4">
+                                        <div className="relative w-full h-40 rounded-lg shadow-md overflow-hidden">
+                                            <Image src={image27} alt="Flair demo" fill style={{ objectFit: 'cover' }} />
+                                        </div>
+                                    </div>
+                                    <div className="col-span-12 md:col-span-8">
+                                        <div className="relative w-full h-40 rounded-lg shadow-md overflow-hidden">
+                                            <Image src={image28} alt="Show rehearsal" fill style={{ objectFit: 'cover' }} />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
