@@ -28,13 +28,13 @@ export default function FloatingSocials() {
 
   return (
     <div ref={ref} className="relative flex items-start">
-      {/* menu - appears below the toggle button */}
+      {/* menu - appears above the toggle button */}
       <ul
         role="menu"
         aria-label="Links"
         className={clsx(
-          'absolute left-0 top-full mt-3 flex flex-col items-start gap-3 transition-all duration-200 ease-[cubic-bezier(.2,.8,.2,1)]',
-          open ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2 pointer-events-none',
+          'absolute left-0 bottom-full mb-3 flex flex-col items-start gap-3 transition-all duration-200 ease-[cubic-bezier(.2,.8,.2,1)]',
+          open ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2 pointer-events-none',
         )}
       >
         {/* Offer link */}

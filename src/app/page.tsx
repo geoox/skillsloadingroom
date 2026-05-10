@@ -113,7 +113,7 @@ export default async function Home() {
         </div>
       </div>
 
-      <div className="fixed left-6 top-1/2 z-50 -translate-y-1/2 transform flex flex-col items-start gap-4">
+      <div className="fixed left-6 bottom-6 z-50 flex flex-col items-start gap-4">
         <FloatingSocials />
       </div>
 
