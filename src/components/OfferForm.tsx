@@ -64,12 +64,12 @@ export default function OfferForm() {
   }
 
   return (
-    <div id="ask-offer" className="bg-gradient-to-b from-gray-200 to-gray-300">
-      <Container className="py-24 sm:py-32">
-        <FadeIn className="-mx-6 rounded-4xl bg-neutral-100 px-6 py-16 sm:mx-0 sm:py-20 md:px-16">
+    <div id="ask-offer" className="bg-gray-300">
+      <Container className="py-12 sm:py-16">
+        <FadeIn className="-mx-6 rounded-4xl bg-neutral-100 px-6 py-10 sm:mx-0 sm:py-12 md:px-12">
           <div className="mx-auto max-w-3xl">
             {/* Header */}
-            <div className="mb-12 text-center">
+            <div className="mb-8 text-center">
               <p className="text-sm font-semibold uppercase tracking-widest text-neutral-400">
                 Solicită o ofertă
               </p>
