@@ -53,7 +53,7 @@ export default function GoogleReviews() {
   }
 
   return (
-    <section id="reviews" className="bg-white/80 py-16">
+    <section id="reviews" className="bg-gradient-to-b from-gray-300 to-white py-16">
       <div className="mx-auto max-w-7xl px-6 lg:px-4">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="font-display text-3xl font-medium text-neutral-900 sm:text-4xl">Ce spun clienții noștri</h2>

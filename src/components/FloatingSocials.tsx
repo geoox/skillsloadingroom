@@ -84,7 +84,7 @@ export default function FloatingSocials() {
       <button
         aria-expanded={open}
         aria-label={open ? 'Close menu' : 'Open menu'}
-        title="Urmărește‑ne"
+        title="Contactează‑ne"
         onClick={() => setOpen((v) => !v)}
         className="inline-flex items-center justify-center rounded-full bg-white/95 px-4 py-3 text-base font-semibold text-neutral-900 shadow-lg hover:bg-white hover:scale-105 transition-transform cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black"
       >
@@ -104,7 +104,7 @@ export default function FloatingSocials() {
           <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
           <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
         </svg>
-        <span className="ml-2 hidden sm:inline">Urmărește‑ne</span>
+        <span className="ml-2 hidden sm:inline">Contactează‑ne</span>
       </button>
     </div>
   )

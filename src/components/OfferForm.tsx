@@ -34,7 +34,7 @@ export default function OfferForm() {
   }
 
   return (
-    <div id="ask-offer" className="bg-white">
+    <div id="ask-offer" className="bg-gradient-to-b from-white to-gray-300">
       <Container className="pt-24 sm:py-16 lg:py-20">
         <FadeIn className="mx-auto max-w-4xl rounded-4xl bg-white px-6 py-12 shadow-sm">
           <div className="grid md:grid-cols-2 gap-8 items-start">
