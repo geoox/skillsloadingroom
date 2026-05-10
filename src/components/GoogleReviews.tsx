@@ -111,7 +111,7 @@ export default function GoogleReviews() {
           {/* controls */}
           {reviews.length > 1 && (
             <div className="absolute left-1/2 top-full mt-6 flex -translate-x-1/2 items-center gap-3">
-              <button onClick={prev} className="rounded-full bg-neutral-950 px-3 py-2 text-white shadow hover:scale-105 transition-transform">Prev</button>
+              <button onClick={prev} className="rounded-full bg-neutral-950 px-3 py-2 text-white shadow hover:scale-105 transition-transform cursor-pointer"></button>
               <div className="flex items-center gap-2">
                 {reviews.map((_, i) => (
                   <button
@@ -122,7 +122,7 @@ export default function GoogleReviews() {
                   />
                 ))}
               </div>
-              <button onClick={next} className="rounded-full bg-neutral-950 px-3 py-2 text-white shadow hover:scale-105 transition-transform">Next</button>
+              <button onClick={next} className="rounded-full bg-neutral-950 px-3 py-2 text-white shadow hover:scale-105 transition-transform cursor-pointer"></button>
             </div>
           )}
         </div>

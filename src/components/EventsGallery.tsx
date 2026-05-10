@@ -77,10 +77,10 @@ const tabs: Tab[] = [
     label: 'Coffee Corner',
     images: [
       // Row 1: 1 × 12 cols hero
-      { src: cc1, alt: 'Coffee corner setup', span: 'col-span-12', aspect: 'aspect-[21/9]' },
+      // { src: cc1, alt: 'Coffee corner setup', span: 'col-span-12', aspect: 'aspect-[21/9]' },
       // Row 2: 2 × 6 cols
-      { src: cc2, alt: 'Coffee service', span: 'col-span-12 md:col-span-6', aspect: 'aspect-[4/3]' },
-      { src: cc3, alt: 'Coffee corner detail', span: 'col-span-12 md:col-span-6', aspect: 'aspect-[4/3]' },
+      { src: cc2, alt: 'Coffee service', span: 'col-span-12 md:col-span-6', aspect: 'aspect-[3/3]' },
+      { src: cc3, alt: 'Coffee corner detail', span: 'col-span-12 md:col-span-6', aspect: 'aspect-[3/3]' },
     ],
   },
   {
@@ -95,7 +95,7 @@ const tabs: Tab[] = [
       { src: priv4, alt: 'Prosecco detail', span: 'col-span-12 md:col-span-4', aspect: 'aspect-[4/3]' },
       { src: priv5, alt: 'Private party', span: 'col-span-12 md:col-span-4', aspect: 'aspect-[4/3]' },
       // Row 3: 1 × 12 cols
-      { src: priv6, alt: 'Prosecco event', span: 'col-span-12', aspect: 'aspect-[21/9]' },
+      // { src: priv6, alt: 'Prosecco event', span: 'col-span-12', aspect: 'aspect-[21/9]' },
     ],
   },
   {
@@ -103,11 +103,11 @@ const tabs: Tab[] = [
     label: 'Flair Show',
     images: [
       // Row 1: 2 × 6 cols
-      { src: flair1, alt: 'Flair bartending show', span: 'col-span-12 md:col-span-6', aspect: 'aspect-[16/9]' },
-      { src: flair2, alt: 'Flair performance', span: 'col-span-12 md:col-span-6', aspect: 'aspect-[16/9]' },
+      { src: flair1, alt: 'Flair bartending show', span: 'col-span-12 md:col-span-6', aspect: 'aspect-[2/2]' },
+      { src: flair2, alt: 'Flair performance', span: 'col-span-12 md:col-span-6', aspect: 'aspect-[2/2]' },
       // Row 2: 2 × 6 cols
-      { src: flair3, alt: 'Flair action', span: 'col-span-12 md:col-span-6', aspect: 'aspect-[3/2]' },
-      { src: flair4, alt: 'Flair bartending', span: 'col-span-12 md:col-span-6', aspect: 'aspect-[3/2]' },
+      { src: flair3, alt: 'Flair action', span: 'col-span-12 md:col-span-6', aspect: 'aspect-[2/2]' },
+      { src: flair4, alt: 'Flair bartending', span: 'col-span-12 md:col-span-6', aspect: 'aspect-[2/2]' },
     ],
   },
   {
