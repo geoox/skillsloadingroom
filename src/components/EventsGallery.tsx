@@ -1,416 +1,230 @@
 'use client';
-import React, { useState } from 'react';
-import Image from 'next/image';
+import React, { useState, useMemo } from 'react';
+import Image, { type StaticImageData } from 'next/image';
 import { FadeIn } from './FadeIn';
 
-// Import all images
-import image6 from '../images/image00006.jpeg';
-import image7 from '../images/fest1.jpg';
-import image8 from '../images/fest2.jpg';
-import image9 from '../images/fest3.jpg';
-import image10 from '../images/image00010.jpeg';
-import image11 from '../images/image00011.jpeg';
-import image12 from '../images/image00012.jpeg';
-import image13 from '../images/image00013.jpeg';
-import image14 from '../images/image00014.jpeg';
-import coffee1 from '../images/ING_0-23.jpg';
-import image5 from '../images/fest6.jpg';
-import image17 from '../images/IMG_-27.jpg';
-import image19 from '../images/image00019.jpeg';
-import image20 from '../images/image00020.jpeg';
-import image21 from '../images/image00021.jpeg';
-import image22 from '../images/image00022.jpeg';
-import image23 from '../images/image00023.jpeg';
-import image24 from '../images/image00024.jpeg';
-import image25 from '../images/image00025.jpeg';
-import image26 from '../images/image00026.jpeg';
-import image27 from '../images/image00027.jpeg';
-import image28 from '../images/image00028.jpeg';
-import image29 from '../images/image00029.jpeg';
-import image4 from '../images/fest7.jpg';
-import image3 from '../images/fest8.jpg';
-import image34 from '../images/image00034.jpeg';
-import image35 from '../images/image00035.jpeg';
+import corp1 from '../images/Corporate/DSC01684.jpg';
+import corp2 from '../images/Corporate/DSC01863-Enhanced-NR.jpg';
+import corp3 from '../images/Corporate/DSC02561.jpg';
+import corp4 from '../images/Corporate/DSC08000.jpg';
+import corp5 from '../images/Corporate/ICP_0350.jpg';
+import corp6 from '../images/Corporate/ICP_0373.jpg';
+import corp7 from '../images/Corporate/IMG_0763.jpg';
+
+import cc1 from '../images/Coffee Corner/IMG_5727.jpeg';
+import cc2 from '../images/Coffee Corner/IMG_5734.jpeg';
+import cc3 from '../images/Coffee Corner/IMG_5739.jpeg';
+
+import priv1 from '../images/Private/DSC02571.jpg';
+import priv2 from '../images/Private/ICP_0410.jpg';
+import priv3 from '../images/Private/ICP_0485.jpg';
+import priv4 from '../images/Private/ICP_0487.jpg';
+import priv5 from '../images/Private/ICP_0533.jpg';
+import priv6 from '../images/Private/ICP_0570.jpg';
+
+import flair1 from '../images/Flair Bartending/DSC01904-Enhanced-NR.jpg';
+import flair2 from '../images/Flair Bartending/DSC01907-Enhanced-NR.jpg';
+import flair3 from '../images/Flair Bartending/DSC01971.jpg';
+import flair4 from '../images/Flair Bartending/DSC02002.jpg';
+
+import log1 from '../images/Inchiriere Logistica/6d70ff50-2c0c-40a0-81fc-6cf3879e414c.jpg';
+import log2 from '../images/Inchiriere Logistica/c37638ac-bd5d-4dc0-83e9-9c20a689ff69.jpg';
+import log3 from '../images/Inchiriere Logistica/cd148839-8f2b-4d6f-a495-46b6a43a9793.jpg';
+import log4 from '../images/Inchiriere Logistica/ce93f5a4-51c8-4f79-99d0-9e5c50150c00.jpg';
+import log5 from '../images/Inchiriere Logistica/db3a5ab8-0e14-4660-b761-e6f28ce5bc7b.jpg';
+import log6 from '../images/Inchiriere Logistica/DSC02574.jpg';
+import log7 from '../images/Inchiriere Logistica/f2d771ac-bb25-4523-aa75-1b4ce2f9a42b.jpg';
+
+import coach1 from '../images/image00035.jpeg';
+import coach2 from '../images/fest8.jpg';
+import coach3 from '../images/image00034.jpeg';
+import coach4 from '../images/image00027.jpeg';
+import coach5 from '../images/image00028.jpeg';
+
+type GalleryItem = {
+  src: StaticImageData;
+  alt: string;
+  span: string;
+  aspect: string;
+};
+
+type Tab = {
+  id: string;
+  label: string;
+  description?: string;
+  images: GalleryItem[];
+};
+
+const tabs: Tab[] = [
+  {
+    id: 'open-bar',
+    label: 'Open Bar',
+    images: [
+      // Row 1: 2 × 6 cols
+      { src: corp1, alt: 'Corporate open bar', span: 'col-span-12 md:col-span-6', aspect: 'aspect-[16/9]' },
+      { src: corp2, alt: 'Corporate event', span: 'col-span-12 md:col-span-6', aspect: 'aspect-[16/9]' },
+      // Row 2: 3 × 4 cols
+      { src: corp3, alt: 'Open bar setup', span: 'col-span-12 md:col-span-4', aspect: 'aspect-[4/3]' },
+      { src: corp4, alt: 'Bar service', span: 'col-span-12 md:col-span-4', aspect: 'aspect-[4/3]' },
+      { src: corp5, alt: 'Bartender serving', span: 'col-span-12 md:col-span-4', aspect: 'aspect-[4/3]' },
+      // Row 3: 2 × 6 cols
+      { src: corp6, alt: 'Corporate bar', span: 'col-span-12 md:col-span-6', aspect: 'aspect-[3/2]' },
+      { src: corp7, alt: 'Event atmosphere', span: 'col-span-12 md:col-span-6', aspect: 'aspect-[3/2]' },
+    ],
+  },
+  {
+    id: 'coffee-corner',
+    label: 'Coffee Corner',
+    images: [
+      // Row 1: 1 × 12 cols hero
+      { src: cc1, alt: 'Coffee corner setup', span: 'col-span-12', aspect: 'aspect-[21/9]' },
+      // Row 2: 2 × 6 cols
+      { src: cc2, alt: 'Coffee service', span: 'col-span-12 md:col-span-6', aspect: 'aspect-[4/3]' },
+      { src: cc3, alt: 'Coffee corner detail', span: 'col-span-12 md:col-span-6', aspect: 'aspect-[4/3]' },
+    ],
+  },
+  {
+    id: 'prosecco-wall',
+    label: 'Prosecco Wall',
+    images: [
+      // Row 1: 2 × 6 cols
+      { src: priv1, alt: 'Private event', span: 'col-span-12 md:col-span-6', aspect: 'aspect-[16/9]' },
+      { src: priv2, alt: 'Prosecco service', span: 'col-span-12 md:col-span-6', aspect: 'aspect-[16/9]' },
+      // Row 2: 3 × 4 cols
+      { src: priv3, alt: 'Prosecco wall', span: 'col-span-12 md:col-span-4', aspect: 'aspect-[4/3]' },
+      { src: priv4, alt: 'Prosecco detail', span: 'col-span-12 md:col-span-4', aspect: 'aspect-[4/3]' },
+      { src: priv5, alt: 'Private party', span: 'col-span-12 md:col-span-4', aspect: 'aspect-[4/3]' },
+      // Row 3: 1 × 12 cols
+      { src: priv6, alt: 'Prosecco event', span: 'col-span-12', aspect: 'aspect-[21/9]' },
+    ],
+  },
+  {
+    id: 'flair-show',
+    label: 'Flair Show',
+    images: [
+      // Row 1: 2 × 6 cols
+      { src: flair1, alt: 'Flair bartending show', span: 'col-span-12 md:col-span-6', aspect: 'aspect-[16/9]' },
+      { src: flair2, alt: 'Flair performance', span: 'col-span-12 md:col-span-6', aspect: 'aspect-[16/9]' },
+      // Row 2: 2 × 6 cols
+      { src: flair3, alt: 'Flair action', span: 'col-span-12 md:col-span-6', aspect: 'aspect-[3/2]' },
+      { src: flair4, alt: 'Flair bartending', span: 'col-span-12 md:col-span-6', aspect: 'aspect-[3/2]' },
+    ],
+  },
+  {
+    id: 'logistica',
+    label: 'Închiriere logistică',
+    images: [
+      // Row 1: 2 × 6 cols
+      { src: log6, alt: 'Logistică eveniment', span: 'col-span-12 md:col-span-6', aspect: 'aspect-[16/9]' },
+      { src: log1, alt: 'Echipament bar', span: 'col-span-12 md:col-span-6', aspect: 'aspect-[16/9]' },
+      // Row 2: 3 × 4 cols
+      { src: log2, alt: 'Bar mobil', span: 'col-span-12 md:col-span-4', aspect: 'aspect-[4/3]' },
+      { src: log3, alt: 'Frigidere', span: 'col-span-12 md:col-span-4', aspect: 'aspect-[4/3]' },
+      { src: log4, alt: 'Accesorii bar', span: 'col-span-12 md:col-span-4', aspect: 'aspect-[4/3]' },
+      // Row 3: 2 × 6 cols
+      { src: log5, alt: 'Logistică detaliu', span: 'col-span-12 md:col-span-6', aspect: 'aspect-[3/2]' },
+      { src: log7, alt: 'Setup logistic', span: 'col-span-12 md:col-span-6', aspect: 'aspect-[3/2]' },
+    ],
+  },
+  {
+    id: 'coaching',
+    label: 'Coaching',
+    description:
+      'De la tehnici de bază la show bartending – oferim coaching 1-la-1 și acces la un spațiu de antrenament dedicat pasionaților de mixologie.',
+    images: [
+      // Row 1: 2 × 6 cols
+      { src: coach1, alt: 'Coaching / Flair room space', span: 'col-span-12 md:col-span-6', aspect: 'aspect-[16/9]' },
+      { src: coach2, alt: 'Training room', span: 'col-span-12 md:col-span-6', aspect: 'aspect-[16/9]' },
+      // Row 2: 3 × 4 cols
+      { src: coach3, alt: 'Practice session', span: 'col-span-12 md:col-span-4', aspect: 'aspect-[4/3]' },
+      { src: coach4, alt: 'Flair demo', span: 'col-span-12 md:col-span-4', aspect: 'aspect-[4/3]' },
+      { src: coach5, alt: 'Show rehearsal', span: 'col-span-12 md:col-span-4', aspect: 'aspect-[4/3]' },
+    ],
+  },
+];
+
+function GalleryImage({ item }: { item: GalleryItem }) {
+  return (
+    <div className={item.span}>
+      <div
+        className={`group relative w-full ${item.aspect} rounded-2xl overflow-hidden shadow-md`}
+      >
+        <Image
+          src={item.src}
+          alt={item.alt}
+          fill
+          sizes="(max-width: 768px) 100vw, 50vw"
+          placeholder="blur"
+          className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+        />
+        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
+      </div>
+    </div>
+  );
+}
 
 function Events() {
-    // State to keep track of active tab
-    const [activeTab, setActiveTab] = useState('open-bar');
+  const [activeTab, setActiveTab] = useState('open-bar');
 
-    // Function to handle tab switching
-    const handleTabChange = (tabId: string) => {
-        setActiveTab(tabId);
-    };
+  const activeData = useMemo(
+    () => tabs.find((t) => t.id === activeTab)!,
+    [activeTab],
+  );
 
-    return (
-        <div id="evenimente" className='bg-gradient-to-b from-white to-gray-300'>
-            <FadeIn>
-                <div className="max-w-7xl m-auto">
-                    <div className="relative right-0">
-                        <div className="w-full">
-                            <div className="relative right-0">
-                                <ul className="relative flex flex-wrap px-1.5 py-1.5 list-none rounded-md bg-slate-100" role="list">
-                                    <li className="z-30 flex-auto text-center">
-                                        <a
-                                            className={`z-30 flex items-center justify-center w-full px-0 py-2 text-lg mb-0 transition-all ease-in-out border-0 rounded-lg cursor-pointer ${activeTab === 'open-bar'
-                                                    ? 'font-bold shadow-md text-white bg-black'
-                                                    : 'text-slate-700 bg-inherit'
-                                                }`}
-                                            onClick={() => handleTabChange('open-bar')}
-                                            role="tab"
-                                            aria-selected={activeTab === 'open-bar'}
-                                            aria-controls="open-bar"
-                                        >
-                                            <span className="ml-1">Open Bar</span>
-                                        </a>
-                                    </li>
+  return (
+    <div id="evenimente" className="bg-gradient-to-b from-white to-gray-200 py-16 sm:py-24">
+      <FadeIn>
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          {/* Tab bar */}
+          <nav className="mb-8">
+            <ul
+              className="flex flex-wrap gap-2 justify-center"
+              role="tablist"
+            >
+              {tabs.map((tab) => (
+                <li key={tab.id} role="presentation">
+                  <button
+                    role="tab"
+                    aria-selected={activeTab === tab.id}
+                    aria-controls={`panel-${tab.id}`}
+                    onClick={() => setActiveTab(tab.id)}
+                    className={`rounded-full px-5 py-2.5 text-sm font-semibold transition-all duration-200 cursor-pointer
+                      ${
+                        activeTab === tab.id
+                          ? 'bg-neutral-950 text-white shadow-lg shadow-neutral-950/20'
+                          : 'bg-white text-neutral-600 hover:bg-neutral-100 hover:text-neutral-900 shadow-sm'
+                      }`}
+                  >
+                    {tab.label}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </nav>
 
-                                    <li className="z-30 flex-auto text-center">
-                                        <a
-                                            className={`z-30 flex items-center justify-center w-full px-0 py-2 text-lg mb-0 transition-all ease-in-out border-0 rounded-lg cursor-pointer ${activeTab === 'coffee-corner'
-                                                    ? 'font-bold shadow-md text-white bg-black'
-                                                    : 'text-slate-700 bg-inherit'
-                                                }`}
-                                            onClick={() => handleTabChange('coffee-corner')}
-                                            role="tab"
-                                            aria-selected={activeTab === 'coffee-corner'}
-                                            aria-controls="coffee-corner"
-                                        >
-                                            <span className="ml-1">Coffee Corner</span>
-                                        </a>
-                                    </li>
+          {/* Active panel — only the active tab is mounted */}
+          <div
+            key={activeTab}
+            id={`panel-${activeTab}`}
+            role="tabpanel"
+            className="animate-fade-in"
+          >
+            {activeData.description && (
+              <p className="mb-8 max-w-3xl text-gray-600 text-lg mx-auto text-center">
+                {activeData.description}
+              </p>
+            )}
 
-                                    <li className="z-30 flex-auto text-center">
-                                        <a
-                                            className={`z-30 flex items-center justify-center w-full px-0 py-2 text-lg mb-0 transition-all ease-in-out border-0 rounded-lg cursor-pointer ${activeTab === 'prosecco-wall'
-                                                    ? 'font-bold shadow-md text-white bg-black'
-                                                    : 'text-slate-700 bg-inherit'
-                                                }`}
-                                            onClick={() => handleTabChange('prosecco-wall')}
-                                            role="tab"
-                                            aria-selected={activeTab === 'prosecco-wall'}
-                                            aria-controls="prosecco-wall"
-                                        >
-                                            <span className="ml-1">Ring for Prosecco Wall</span>
-                                        </a>
-                                    </li>
-
-                                    <li className="z-30 flex-auto text-center">
-                                        <a
-                                            className={`z-30 flex items-center justify-center w-full px-0 py-2 text-lg mb-0 transition-all ease-in-out border-0 rounded-lg cursor-pointer ${activeTab === 'flair-show'
-                                                    ? 'font-bold shadow-md text-white bg-black'
-                                                    : 'text-slate-700 bg-inherit'
-                                                }`}
-                                            onClick={() => handleTabChange('flair-show')}
-                                            role="tab"
-                                            aria-selected={activeTab === 'flair-show'}
-                                            aria-controls="flair-show"
-                                        >
-                                            <span className="ml-1">Flair Bartending Show</span>
-                                        </a>
-                                    </li>
-
-                                    <li className="z-30 flex-auto text-center">
-                                        <a
-                                            className={`z-30 flex items-center justify-center w-full px-0 py-2 text-lg mb-0 transition-all ease-in-out border-0 rounded-lg cursor-pointer ${activeTab === 'logistica'
-                                                    ? 'font-bold shadow-md text-white bg-black'
-                                                    : 'text-slate-700 bg-inherit'
-                                                }`}
-                                            onClick={() => handleTabChange('logistica')}
-                                            role="tab"
-                                            aria-selected={activeTab === 'logistica'}
-                                            aria-controls="logistica"
-                                        >
-                                            <span className="ml-1">Închiriere logistică</span>
-                                        </a>
-                                    </li>
-
-                                    <li className="z-30 flex-auto text-center">
-                                        <a
-                                            className={`z-30 flex items-center justify-center w-full px-0 py-2 text-lg mb-0 transition-all ease-in-out border-0 rounded-lg cursor-pointer ${activeTab === 'coaching'
-                                                    ? 'font-bold shadow-md text-white bg-black'
-                                                    : 'text-slate-700 bg-inherit'
-                                                }`}
-                                            onClick={() => handleTabChange('coaching')}
-                                            role="tab"
-                                            aria-selected={activeTab === 'coaching'}
-                                            aria-controls="coaching"
-                                        >
-                                            <span className="ml-1">Coaching</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="p-5">
-
-                            {/* Open Bar */}
-                            <div
-                                className={`${activeTab === 'open-bar' ? 'block' : 'hidden'} transition-opacity duration-150 ease-linear`}
-                                id="open-bar"
-                                role="tabpanel"
-                            >
-                                <div className="grid grid-cols-12 gap-4 p-4">
-                                    <div className="col-span-12 md:col-span-8">
-                                        <div className="relative w-full h-64 rounded-lg shadow-md overflow-hidden">
-                                            <Image 
-                                                src={image6}
-                                                alt="Bar - Open Bar"
-                                                fill
-                                                style={{ objectFit: 'cover' }}
-                                            />
-                                        </div>
-                                    </div>
-                                    <div className="col-span-12 md:col-span-4">
-                                        <div className="relative w-full h-64 rounded-lg shadow-md overflow-hidden">
-                                            <Image 
-                                                src={image26}
-                                                alt="Open bar detail"
-                                                fill
-                                                style={{ objectFit: 'cover' }}
-                                            />
-                                        </div>
-                                    </div>
-                                    <div className="col-span-6 md:col-span-4">
-                                        <div className="relative w-full h-40 rounded-lg shadow-md overflow-hidden">
-                                            <Image 
-                                                src={image22}
-                                                alt="Bar tools"
-                                                fill
-                                                style={{ objectFit: 'cover' }}
-                                            />
-                                        </div>
-                                    </div>
-                                    <div className="col-span-6 md:col-span-3">
-                                        <div className="relative w-full h-40 rounded-lg shadow-md overflow-hidden">
-                                            <Image 
-                                                src={image11}
-                                                alt="Cocktail shaker"
-                                                fill
-                                                style={{ objectFit: 'cover' }}
-                                            />
-                                        </div>
-                                    </div>
-                                    <div className="col-span-12 md:col-span-5">
-                                        <div className="relative w-full h-40 rounded-lg shadow-md overflow-hidden">
-                                            <Image 
-                                                src={image10}
-                                                alt="Pouring cocktail"
-                                                fill
-                                                style={{ objectFit: 'cover' }}
-                                            />
-                                        </div>
-                                    </div>
-                                    <div className="col-span-12 md:col-span-7">
-                                        <div className="relative w-full h-48 rounded-lg shadow-md overflow-hidden">
-                                            <Image 
-                                                src={image5}
-                                                alt="Bar counter"
-                                                fill
-                                                style={{ objectFit: 'cover' }}
-                                            />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Coffee Corner */}
-                            <div
-                                className={`${activeTab === 'coffee-corner' ? 'block' : 'hidden'} transition-opacity duration-150 ease-linear`}
-                                id="coffee-corner"
-                                role="tabpanel"
-                            >
-                                <div className="grid grid-cols-12 gap-4 p-4">
-                                    <div className="col-span-12 md:col-span-6">
-                                        <div className="relative w-full h-56 rounded-lg shadow-md overflow-hidden">
-                                            <Image src={coffee1} alt="Coffee corner" fill style={{ objectFit: 'cover' }} />
-                                        </div>
-                                    </div>
-                                    <div className="col-span-6 md:col-span-3">
-                                        <div className="relative w-full h-56 rounded-lg shadow-md overflow-hidden">
-                                            <Image src={image17} alt="Coffee service" fill style={{ objectFit: 'cover' }} />
-                                        </div>
-                                    </div>
-                                    <div className="col-span-6 md:col-span-3">
-                                        <div className="relative w-full h-56 rounded-lg shadow-md overflow-hidden">
-                                            <Image src={image28} alt="Coffee setup" fill style={{ objectFit: 'cover' }} />
-                                        </div>
-                                    </div>
-                                    <div className="col-span-12 md:col-span-4">
-                                        <div className="relative w-full h-40 rounded-lg shadow-md overflow-hidden">
-                                            <Image src={image20} alt="Bar equipment" fill style={{ objectFit: 'cover' }} />
-                                        </div>
-                                    </div>
-                                    <div className="col-span-12 md:col-span-8">
-                                        <div className="relative w-full h-40 rounded-lg shadow-md overflow-hidden">
-                                            <Image src={image21} alt="Service" fill style={{ objectFit: 'cover' }} />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Prosecco Wall */}
-                            <div
-                                className={`${activeTab === 'prosecco-wall' ? 'block' : 'hidden'} transition-opacity duration-150 ease-linear`}
-                                id="prosecco-wall"
-                                role="tabpanel"
-                            >
-                                <div className="grid grid-cols-12 gap-4 p-4">
-                                    <div className="col-span-12 md:col-span-6">
-                                        <div className="relative w-full h-56 rounded-lg shadow-md overflow-hidden">
-                                            <Image src={image14} alt="Prosecco wall" fill style={{ objectFit: 'cover' }} />
-                                        </div>
-                                    </div>
-                                    <div className="col-span-6 md:col-span-3">
-                                        <div className="relative w-full h-56 rounded-lg shadow-md overflow-hidden">
-                                            <Image src={image13} alt="Champagne service" fill style={{ objectFit: 'cover' }} />
-                                        </div>
-                                    </div>
-                                    <div className="col-span-6 md:col-span-3">
-                                        <div className="relative w-full h-56 rounded-lg shadow-md overflow-hidden">
-                                            <Image src={image11} alt="Glasses" fill style={{ objectFit: 'cover' }} />
-                                        </div>
-                                    </div>
-                                    <div className="col-span-12 md:col-span-4">
-                                        <div className="relative w-full h-40 rounded-lg shadow-md overflow-hidden">
-                                            <Image src={image10} alt="Pour" fill style={{ objectFit: 'cover' }} />
-                                        </div>
-                                    </div>
-                                    <div className="col-span-12 md:col-span-8">
-                                        <div className="relative w-full h-40 rounded-lg shadow-md overflow-hidden">
-                                            <Image src={image5} alt="Prosecco event" fill style={{ objectFit: 'cover' }} />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Flair Show */}
-                            <div
-                                className={`${activeTab === 'flair-show' ? 'block' : 'hidden'} transition-opacity duration-150 ease-linear`}
-                                id="flair-show"
-                                role="tabpanel"
-                            >
-                                <div className="grid grid-cols-12 gap-4 p-4">
-                                    <div className="col-span-12 md:col-span-5">
-                                        <div className="relative w-full h-64 rounded-lg shadow-md overflow-hidden">
-                                            <Image src={image22} alt="Flair show" fill style={{ objectFit: 'cover' }} />
-                                        </div>
-                                    </div>
-                                    <div className="col-span-12 md:col-span-7">
-                                        <div className="grid grid-cols-12 gap-4 h-full">
-                                            <div className="col-span-12">
-                                                <div className="relative w-full h-32 rounded-lg shadow-md overflow-hidden">
-                                                    <Image src={image3} alt="Performance" fill style={{ objectFit: 'cover' }} />
-                                                </div>
-                                            </div>
-                                            <div className="col-span-6">
-                                                <div className="relative w-full h-28 rounded-lg shadow-md overflow-hidden">
-                                                    <Image src={image23} alt="Flair action" fill style={{ objectFit: 'cover' }} />
-                                                </div>
-                                            </div>
-                                            <div className="col-span-6">
-                                                <div className="relative w-full h-28 rounded-lg shadow-md overflow-hidden">
-                                                    <Image src={image27} alt="Flair juggling" fill style={{ objectFit: 'cover' }} />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-span-4 md:col-span-3">
-                                        <div className="relative w-full h-40 rounded-lg shadow-md overflow-hidden">
-                                            <Image src={image28} alt="Show close-up" fill style={{ objectFit: 'cover' }} />
-                                        </div>
-                                    </div>
-                                    <div className="col-span-4 md:col-span-3">
-                                        <div className="relative w-full h-40 rounded-lg shadow-md overflow-hidden">
-                                            <Image src={image29} alt="Flair movement" fill style={{ objectFit: 'cover' }} />
-                                        </div>
-                                    </div>
-                                    <div className="col-span-4 md:col-span-3">
-                                        <div className="relative w-full h-40 rounded-lg shadow-md overflow-hidden">
-                                            <Image src={image13} alt="Crowd enjoying show" fill style={{ objectFit: 'cover' }} />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Închiriere logistică */}
-                            <div
-                                className={`${activeTab === 'logistica' ? 'block' : 'hidden'} transition-opacity duration-150 ease-linear`}
-                                id="logistica"
-                                role="tabpanel"
-                            >
-                                <div className="grid grid-cols-12 gap-4 p-4">
-                                    <div className="col-span-12 md:col-span-6">
-                                        <div className="relative w-full h-56 rounded-lg shadow-md overflow-hidden">
-                                            <Image src={image20} alt="Logistică - mobile bar" fill style={{ objectFit: 'cover' }} />
-                                        </div>
-                                    </div>
-                                    <div className="col-span-6 md:col-span-3">
-                                        <div className="relative w-full h-56 rounded-lg shadow-md overflow-hidden">
-                                            <Image src={image25} alt="Equipment" fill style={{ objectFit: 'cover' }} />
-                                        </div>
-                                    </div>
-                                    <div className="col-span-6 md:col-span-3">
-                                        <div className="relative w-full h-56 rounded-lg shadow-md overflow-hidden">
-                                            <Image src={image24} alt="Frigidere și accesorii" fill style={{ objectFit: 'cover' }} />
-                                        </div>
-                                    </div>
-                                    <div className="col-span-12 md:col-span-4">
-                                        <div className="relative w-full h-40 rounded-lg shadow-md overflow-hidden">
-                                            <Image src={image26} alt="Logistică - detaliu" fill style={{ objectFit: 'cover' }} />
-                                        </div>
-                                    </div>
-                                    <div className="col-span-12 md:col-span-8">
-                                        <div className="relative w-full h-40 rounded-lg shadow-md overflow-hidden">
-                                            <Image src={image21} alt="Bar setup" fill style={{ objectFit: 'cover' }} />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Coaching */}
-                            <div
-                                className={`${activeTab === 'coaching' ? 'block' : 'hidden'} transition-opacity duration-150 ease-linear`}
-                                id="coaching"
-                                role="tabpanel"
-                            >
-                                <div className="p-4">
-                                  <p className="mb-6 text-gray-700 max-w-3xl">De la tehnici de bază la show bartending – oferim coaching 1-la-1 și acces la un spațiu de antrenament dedicat pasionaților de mixologie.</p>
-                                </div>
-                                <div className="grid grid-cols-12 gap-4 p-4">
-                                    <div className="col-span-12 md:col-span-6">
-                                        <div className="relative w-full h-56 rounded-lg shadow-md overflow-hidden">
-                                            <Image src={image35} alt="Coaching / Flair room space" fill style={{ objectFit: 'cover' }} />
-                                        </div>
-                                    </div>
-                                    <div className="col-span-6 md:col-span-3">
-                                        <div className="relative w-full h-56 rounded-lg shadow-md overflow-hidden">
-                                            <Image src={image3} alt="Training room" fill style={{ objectFit: 'cover' }} />
-                                        </div>
-                                    </div>
-                                    <div className="col-span-6 md:col-span-3">
-                                        <div className="relative w-full h-56 rounded-lg shadow-md overflow-hidden">
-                                            <Image src={image34} alt="Practice session" fill style={{ objectFit: 'cover' }} />
-                                        </div>
-                                    </div>
-                                    <div className="col-span-12 md:col-span-4">
-                                        <div className="relative w-full h-40 rounded-lg shadow-md overflow-hidden">
-                                            <Image src={image27} alt="Flair demo" fill style={{ objectFit: 'cover' }} />
-                                        </div>
-                                    </div>
-                                    <div className="col-span-12 md:col-span-8">
-                                        <div className="relative w-full h-40 rounded-lg shadow-md overflow-hidden">
-                                            <Image src={image28} alt="Show rehearsal" fill style={{ objectFit: 'cover' }} />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </FadeIn>
+            <div className="grid grid-cols-12 gap-3 sm:gap-4">
+              {activeData.images.map((item, i) => (
+                <GalleryImage key={i} item={item} />
+              ))}
+            </div>
+          </div>
         </div>
-    );
+      </FadeIn>
+    </div>
+  );
 }
 
 export default Events;
