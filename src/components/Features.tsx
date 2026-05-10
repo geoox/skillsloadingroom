@@ -50,8 +50,7 @@ export function Features(): JSX.Element {
   return (
     <div
       ref={containerRef}
-      className="bg-gradient-to-b from-white to-gray-300 py-12"
-      id="despre-noi"
+      className=" py-12"
     >
       <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
         <h2 className="font-display text-center text-base/7 font-semibold text-black">Showcase</h2>

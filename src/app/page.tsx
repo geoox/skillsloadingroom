@@ -18,7 +18,7 @@ import FloatingSocials from '@/components/FloatingSocials'
 import GoogleReviews from '@/components/GoogleReviews'
 function Services() {
   return (
-    <div id="servicii">
+    <div id="servicii" className="bg-gradient-to-b from-white to-gray-300">
       <FadeIn>
         <SectionIntro
           eyebrow=""
@@ -125,7 +125,7 @@ export default async function Home() {
 
       {/* <Team /> */}
 
-      <div className=" bg-gradient-to-b from-gray-300 to-white h-[80vh] rounded-md relative overflow-hidden">
+      {/* <div className=" bg-gradient-to-b from-gray-300 to-white h-[80vh] rounded-md relative overflow-hidden">
         <Image
           src={landingImg}
           alt="Skills Loading Room background"
@@ -141,7 +141,7 @@ export default async function Home() {
             </h1>
           </FadeIn>
         </div>
-      </div>
+      </div> */}
 
       <Events />
 
