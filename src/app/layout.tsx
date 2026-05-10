@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     template: 'Skills Loading Room',
     default: 'Skills Loading Room - Open bar services, catering, training room',
   },
+  icons: {
+    icon: '/slr.png',
+  },
 }
 
 export default function Layout({ children }: { children: React.ReactNode }) {

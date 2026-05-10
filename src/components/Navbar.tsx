@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/Button';
 import Image from 'next/image';
-import logoImg from '@/images/logo.jpg';
+import logoImg from '@/images/slr.png';
 
 interface NavLinkProps {
   href: string;
@@ -56,7 +56,7 @@ export function Navbar(): JSX.Element {
 
   return (
     <header
-      className="fixed inset-x-0 top-0 z-30 mx-auto w-full max-w-screen-md border bg-black/80 md:py-1 shadow-lg backdrop-blur-lg md:top-6 md:rounded-3xl lg:max-w-screen-lg">
+      className="fixed inset-x-0 top-0 z-30 mx-auto w-full max-w-screen-md border bg-black md:py-1 shadow-lg backdrop-blur-lg md:top-6 md:rounded-3xl lg:max-w-screen-lg">
       <div className="md:px-4">
         <div className="flex items-center justify-between">
           <div className="flex shrink-0">
@@ -67,7 +67,7 @@ export function Navbar(): JSX.Element {
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex md:items-center md:justify-center md:gap-5">
-            <NavLink href="#services" className='text-white'>Servicii</NavLink>
+            <NavLink href="#servicii" className='text-white'>Servicii</NavLink>
             <NavLink href="#despre-noi" className='text-white'>Despre noi</NavLink>
             <NavLink href="#evenimente" className='text-white'>Evenimente</NavLink>
           </div>
@@ -102,7 +102,7 @@ export function Navbar(): JSX.Element {
         {isMenuOpen && (
           <div className="md:hidden mt-2 py-3 bg-black/80 rounded-lg">
             <div className="flex flex-col items-center space-y-3">
-              <NavLink href="#services" className='text-white w-full text-center' onClick={closeMenu}>Servicii</NavLink>
+              <NavLink href="#servicii" className='text-white w-full text-center' onClick={closeMenu}>Servicii</NavLink>
               <NavLink href="#despre-noi" className='text-white w-full text-center' onClick={closeMenu}>Despre noi</NavLink>
               <NavLink href="#evenimente" className='text-white w-full text-center' onClick={closeMenu}>Evenimente</NavLink>
               <NavLink 

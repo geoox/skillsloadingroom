@@ -22,7 +22,7 @@ function Services() {
       <FadeIn>
         <SectionIntro
           eyebrow=""
-          title="Suntem aici să te ajutăm!"
+          title="Servicii"
           className="mt-24 sm:mt-32 lg:mt-40"
         >
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -48,32 +48,32 @@ function Services() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6 hover:scale-[1.02] hover:shadow-lg transition-all">
                   <h4 className="text-xl font-semibold text-gray-900">Open Bar</h4>
-                  <p className="mt-2 text-sm text-gray-700">Bar complet la fața locului cu cocktailuri personalizate.</p>
+                  <p className="mt-2 text-sm text-gray-700">Open bar complet echipat, cu băuturi premium și barmani profesioniști, pentru o experiență fără griji la orice eveniment.</p>
                 </div>
 
                 <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6 hover:scale-[1.02] hover:shadow-lg transition-all">
                   <h4 className="text-xl font-semibold text-gray-900">Coffee Corner</h4>
-                  <p className="mt-2 text-sm text-gray-700">Colțișor de cafea cu barista și echipament profesional.</p>
+                  <p className="mt-2 text-sm text-gray-700">Coffee corner elegant, cu cafea de specialitate și servire rafinată, ideal pentru pauze energizante la evenimente corporate sau private.</p>
                 </div>
 
                 <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6 hover:scale-[1.02] hover:shadow-lg transition-all">
                   <h4 className="text-xl font-semibold text-gray-900">Ring for Prosecco Wall</h4>
-                  <p className="mt-2 text-sm text-gray-700">Perete de Prosecco pregătit pentru toasturi și photo‑op.</p>
+                  <p className="mt-2 text-sm text-gray-700">Ring for Prosecco Wall adaugă un element spectaculos și interactiv, oferind invitaților prosecco într-un mod memorabil și stylish.</p>
                 </div>
 
                 <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6 hover:scale-[1.02] hover:shadow-lg transition-all">
                   <h4 className="text-xl font-semibold text-gray-900">Flair Bartending Show</h4>
-                  <p className="mt-2 text-sm text-gray-700">Spectacol flair — jonglerii și demonstrații live.</p>
+                  <p className="mt-2 text-sm text-gray-700">Flair Bartending Show transformă servirea băuturilor într-un adevărat spectacol vizual, plin de energie și divertisment.</p>
                 </div>
 
                 <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6 hover:scale-[1.02] hover:shadow-lg transition-all">
                   <h4 className="text-xl font-semibold text-gray-900">Închiriere logistică</h4>
-                  <p className="mt-2 text-sm text-gray-700">Echipamente și mobilier bar (frigidere, pahare, mese).</p>
+                  <p className="mt-2 text-sm text-gray-700">Oferim închiriere logistică completă pentru evenimente, de la baruri mobile la echipamente profesionale, adaptate oricărui concept.</p>
                 </div>
 
                 <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6 hover:scale-[1.02] hover:shadow-lg transition-all">
                   <h4 className="text-xl font-semibold text-gray-900">Flair Room</h4>
-                  <p className="mt-2 text-sm text-gray-700">Spațiu dedicat pentru antrenamente și demonstrații flair.</p>
+                  <p className="mt-2 text-sm text-gray-700">Flair room este spațiul dedicat antrenamentelor și demonstrațiilor de bartending, creat pentru performanță și creativitate.</p>
                 </div>
               </div>
             </div>
@@ -112,29 +112,7 @@ export default async function Home() {
         </div>
       </div>
 
-      <div className="fixed right-6 top-1/2 z-50 -translate-y-1/2 transform flex flex-col items-end gap-4">
-        <a
-          href="#ask-offer"
-          className="rounded-full bg-neutral-950 px-5 py-3 text-base font-semibold text-white shadow-lg hover:bg-neutral-800 hover:scale-105 transition-transform focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-900"
-          aria-label="Ask for an offer"
-          title="Cere o ofertă"
-        >
-          <svg 
-      viewBox="0 0 24 24" 
-      fill="none" 
-      stroke="currentColor" 
-      strokeWidth="2" 
-      strokeLinecap="round" 
-      strokeLinejoin="round" 
-      aria-hidden="true" 
-      className='w-4 h-4 inline-block mx-2'
-    >
-      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-      <polyline points="22,6 12,13 2,6" />
-    </svg>
-          Cere o ofertă
-        </a>
-
+      <div className="fixed left-6 top-1/2 z-50 -translate-y-1/2 transform flex flex-col items-start gap-4">
         <FloatingSocials />
       </div>
 
