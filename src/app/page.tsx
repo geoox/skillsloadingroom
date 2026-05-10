@@ -46,35 +46,35 @@ function Services() {
             {/* Right Services List */}
             <div className="mt-16 lg:mt-0 lg:w-1/2 space-y-8 hidden md:block">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6 hover:scale-[1.02] hover:shadow-lg transition-all">
+                <a href="#gallery-open-bar" className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6 hover:scale-[1.02] hover:shadow-lg transition-all cursor-pointer block">
                   <h4 className="text-xl font-semibold text-gray-900">Open Bar</h4>
                   <p className="mt-2 text-sm text-gray-700">Open bar complet echipat, cu băuturi premium și barmani profesioniști, pentru o experiență fără griji la orice eveniment.</p>
-                </div>
+                </a>
 
-                <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6 hover:scale-[1.02] hover:shadow-lg transition-all">
+                <a href="#gallery-coffee-corner" className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6 hover:scale-[1.02] hover:shadow-lg transition-all cursor-pointer block">
                   <h4 className="text-xl font-semibold text-gray-900">Coffee Corner</h4>
                   <p className="mt-2 text-sm text-gray-700">Coffee corner elegant, cu cafea de specialitate și servire rafinată, ideal pentru pauze energizante la evenimente corporate sau private.</p>
-                </div>
+                </a>
 
-                <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6 hover:scale-[1.02] hover:shadow-lg transition-all">
+                <a href="#gallery-prosecco-wall" className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6 hover:scale-[1.02] hover:shadow-lg transition-all cursor-pointer block">
                   <h4 className="text-xl font-semibold text-gray-900">Ring for Prosecco Wall</h4>
                   <p className="mt-2 text-sm text-gray-700">Ring for Prosecco Wall adaugă un element spectaculos și interactiv, oferind invitaților prosecco într-un mod memorabil și stylish.</p>
-                </div>
+                </a>
 
-                <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6 hover:scale-[1.02] hover:shadow-lg transition-all">
+                <a href="#gallery-flair-show" className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6 hover:scale-[1.02] hover:shadow-lg transition-all cursor-pointer block">
                   <h4 className="text-xl font-semibold text-gray-900">Flair Bartending Show</h4>
                   <p className="mt-2 text-sm text-gray-700">Flair Bartending Show transformă servirea băuturilor într-un adevărat spectacol vizual, plin de energie și divertisment.</p>
-                </div>
+                </a>
 
-                <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6 hover:scale-[1.02] hover:shadow-lg transition-all">
+                <a href="#gallery-logistica" className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6 hover:scale-[1.02] hover:shadow-lg transition-all cursor-pointer block">
                   <h4 className="text-xl font-semibold text-gray-900">Închiriere logistică</h4>
                   <p className="mt-2 text-sm text-gray-700">Oferim închiriere logistică completă pentru evenimente, de la baruri mobile la echipamente profesionale, adaptate oricărui concept.</p>
-                </div>
+                </a>
 
-                <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6 hover:scale-[1.02] hover:shadow-lg transition-all">
+                <a href="#gallery-coaching" className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6 hover:scale-[1.02] hover:shadow-lg transition-all cursor-pointer block">
                   <h4 className="text-xl font-semibold text-gray-900">Flair Room</h4>
                   <p className="mt-2 text-sm text-gray-700">Flair room este spațiul dedicat antrenamentelor și demonstrațiilor de bartending, creat pentru performanță și creativitate.</p>
-                </div>
+                </a>
               </div>
             </div>
           </div>
@@ -95,17 +95,16 @@ export default async function Home() {
   return (
     <div id="home">
       <div className="relative h-screen w-screen overflow-hidden">
-        <iframe
-          src="https://www.youtube.com/embed/_GzmbWt6Lmw?autoplay=1&mute=1&controls=0&loop=1&showinfo=0&playsinline=1&rel=0&modestbranding=0&enablejsapi=1&playlist=_GzmbWt6Lmw"
-          title="SkillsLoadingRoom"
-          allowFullScreen
-          style={{
-            width: '300%',
-            height: '100%',
-            marginLeft: '-100%',
-            pointerEvents: 'none',
-          }}
-        />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          className="absolute inset-0 h-full w-full object-cover"
+        >
+          <source src="/hero.mp4" type="video/mp4" />
+        </video>
 
         <div className="absolute bottom-0 right-8 transform -translate-y-1/2 text-white text-xl z-10 font-display font-medium tracking-tight [text-wrap:balance] sm:text-7xl hidden md:block">
           Skills Loading Room

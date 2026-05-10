@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect, useRef, useCallback } from 'react';
 import Image, { type StaticImageData } from 'next/image';
 import { FadeIn } from './FadeIn';
 
@@ -165,6 +165,26 @@ function GalleryImage({ item }: { item: GalleryItem }) {
 
 function Events() {
   const [activeTab, setActiveTab] = useState('open-bar');
+  const galleryRef = useRef<HTMLDivElement>(null);
+
+  const handleHash = useCallback(() => {
+    const hash = window.location.hash.replace('#gallery-', '');
+    const match = tabs.find((t) => t.id === hash);
+    if (match) {
+      setActiveTab(match.id);
+      // Clear the hash so the same link can be clicked again
+      history.replaceState(null, '', window.location.pathname);
+      setTimeout(() => {
+        galleryRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
+    }
+  }, []);
+
+  useEffect(() => {
+    handleHash();
+    window.addEventListener('hashchange', handleHash);
+    return () => window.removeEventListener('hashchange', handleHash);
+  }, [handleHash]);
 
   const activeData = useMemo(
     () => tabs.find((t) => t.id === activeTab)!,
@@ -172,7 +192,7 @@ function Events() {
   );
 
   return (
-    <div id="evenimente" className="bg-gradient-to-b from-white to-gray-200 py-16 sm:py-24">
+    <div id="evenimente" ref={galleryRef} className="bg-gradient-to-b from-white to-gray-200 py-16 sm:py-24">
       <FadeIn>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* Tab bar */}
