@@ -44,7 +44,7 @@ function Services() {
             </div>
 
             {/* Right Services List */}
-            <div className="mt-16 lg:mt-0 lg:w-1/2 space-y-8 hidden md:block">
+            <div className="mt-16 lg:mt-0 lg:w-1/2 space-y-8">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <a href="#gallery-open-bar" className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6 hover:scale-[1.02] hover:shadow-lg hover:bg-neutral-950 hover:border-neutral-950 transition-all cursor-pointer block group">
                   <h4 className="text-xl font-semibold text-gray-900 group-hover:text-white transition-colors">Open Bar</h4>
